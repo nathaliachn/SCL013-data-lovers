@@ -1,23 +1,14 @@
-import { example, anotherExample } from '../src/data.js';
+import { filterName, filterImagen } from '../src/data.js';
 
 
-describe('example', () => {
-  test('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
-
-  test('returns `example`', () => {
-    expect(example()).toBe('example');
+describe('filterName', () => {
+  test('debería ser una function', () => {
+    expect(typeof filterName).toBe('function');
   });
 });
 
-
-describe('anotherExample', () => {
-  test('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+describe('filterImagen', () =>{
+  test('debería ser una function', ()=>{
+  expect(typeof filterImagen).toBe('function');
   });
-
-  test('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
+}); 
