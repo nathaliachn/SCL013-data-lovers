@@ -34,8 +34,8 @@
   return (house)
 } */
 export const filterCasa = (data, condition) =>{
-  //console.log(condition)
+  console.log(condition)
   let house = data.filter((dato) => dato.house === condition);
-  //console.log(house)
+  console.log(house)
   return house
 };
