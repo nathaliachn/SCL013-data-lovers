@@ -1,6 +1,207 @@
+:root{
+    --color-header: black;
+    --color-nav:#049DBF;
+    --color-nav-dark: #02687F;
+    --color-section:#03658C;
+    --color-aside: #F1F2EB;
+    --color-footer: #023859;
+    --color-white: #fff;
+    --color-black:#000;
+}
+
 *{
-    margin: 0;
+    margin:0;
     padding: 0;
+}
+
+body{
+    background-image: url(./img/fondo2.gif); 
+    background-size: 100%;
+
+}
+
+h2{
+    font-family: "BluuNext-Blod";
+    src: url(./font/BluuNext-Blod.otf);
+    font-size: 30px;
+    color: #CF9033;
+    text-align: center;
+}
+
+/*Barra superior*/
+.main-header{
+    background-color: var(--color-header);
+    color: var(--color-while);
+    line-height: 5;
+    text-align: center;
+    color: white;
+}
+
+.main-nav{
+    background-color: var(--color-nav);
+}
+
+@media screen and (min-width:768px){
+    .nav-container{
+        display: flex;
+    }
+
+    .nav-containerItem{
+        flex-grow: 1;
+    }
+}
+ 
+.nav-containerItem{
+    text-align:center;
+    line-height: 2.5;
+    border-bottom: 1px solid var(--color-white);
+}
+
+.nav-containerLink{
+    display: block;
+    color: var(--color-white);
+    width: 100%;
+}
+
+/*Seccion de inicio*/
+#pagInicio{
+    background-color: burlywood;
+}
+/*logo*/
+#logo{
+    width: 3%;
+}
+
+/*↓menu hamburguesa*/
+#check{
+    display: none;
+}
+
+#icone{
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+}
+
+.barra{
+    /* background-color: #333; */
+    height: 100%;
+    width: 180px;
+    position: absolute;
+    transition: all .2 linear;
+    left: -300px;
+}
+
+.nav-menu{
+    width: 100%;
+    position: absolute;
+}
+
+.nav-menu a{
     text-decoration: none;
-    list-style: none;
+}
+.link{
+    background-color: #020626;
+    padding: 20px;
+    font-family: "SofiaProRegular";
+    src: url(./font/SofiaProRegular.otf);
+    font-size: 12pt;
+    transition: all .2s linear;
+    color: #f4f4f9;
+    border-bottom: 2px slid #222;
+    opacity: 0;
+    margin-top: 200px;
+}
+
+.link:hover{
+    background-color: #668999;
+}
+
+#check:checked ~ .barra {
+    transform: translate(300px);
+} 
+
+  #check:checked ~ .barra nav a .link {
+    opacity: 1;
+    margin-top: 0;
+    transition-delay: .2s; } 
+/*↑fin menu hamburgueza*/
+
+
+/*Seccion de Personajes*/
+#pagPersonajes{
+    display: block;
+    width: 100%;
+    text-align: center;
+    overflow: auto;
+}
+
+.pag-personajes{
+    background-color: rgba(22, 8, 8, 0.7);
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    align-content: stretch;   
+}
+
+.select{
+    width: 25%;
+} 
+
+.cont-personajes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: stretch;
+}
+
+#root{
+    background-color: rgba(22, 8, 8, 0.7);
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: stretch;    
+}
+
+.card{
+    background-image: url(./img/griffindor1.jpg);
+    background-size: 204px 500px;
+    width: 204px;
+    order: 0;
+    flex: 0 1 auto;
+    align-self: stretch;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
+.imgPersonaje{
+    width: 106px;
+    right: 108px;
+    border-radius: 20px;
+}
+
+.namePersonaje{
+    font-family: "BluuNext-Blod";
+    src: url(./font/BluuNext-Blod.otf);
+    color: #CF9033;
+    font-size: 20px;
+}
+/*footer*/
+footer{
+    background-color: rgba(22, 8, 8, 0.7);
+    width: 100%;
+    height: 5%;
+    bottom: 0;
+    position: fixed;
+    text-align: left;
+    color: white;
 }
