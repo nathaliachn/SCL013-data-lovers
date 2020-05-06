@@ -20,5 +20,22 @@
       img.push(data[i].image)
     }
     return img;
-   
-  }; 
+    }; 
+
+
+//filtro por casa 
+/* export const filterCasa = (data, condition) =>{
+  console.log(condition)
+  let house = [];
+  for(let i=0; i<data.length;i++){
+    house.push(data[i].house)
+  }
+  console.log(house)
+  return (house)
+} */
+export const filterCasa = (data, condition) =>{
+  //console.log(condition)
+  let house = data.filter((dato) => dato.house === condition);
+  //console.log(house)
+  return house
+};

@@ -1,4 +1,4 @@
-import { filterName, filterImagen } from '../src/data.js';
+import { filterName, filterImagen} from '../src/data.js';
 
 
 describe('filterName', () => {
@@ -12,3 +12,4 @@ describe('filterImagen', () =>{
   expect(typeof filterImagen).toBe('function');
   });
 }); 
+
