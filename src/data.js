@@ -22,20 +22,41 @@
     return img;
     }; 
 
-
 //filtro por casa 
-/* export const filterCasa = (data, condition) =>{
-  console.log(condition)
-  let house = [];
-  for(let i=0; i<data.length;i++){
-    house.push(data[i].house)
-  }
-  console.log(house)
-  return (house)
-} */
 export const filterCasa = (data, condition) =>{
-  console.log(condition)
   let house = data.filter((dato) => dato.house === condition);
-  console.log(house)
+  //let house4 = data.map((dato) => dato.house === condition);
   return house
 };
+
+//filtro por Linaje
+ export const filterLinaje = (data, condition) =>{
+  let ancestry = data.filter((dato) => dato.ancestry === condition);
+  return ancestry
+}; 
+
+//filtro por Género
+export const filterGenero = (data, condition) =>{
+  let genero = data.filter((dato) => dato.gender === condition);
+  return genero;
+}; 
+
+
+//filtro por Género
+export const filterEspecie = (data, condition) =>{
+  let especie = data.filter((dato) => dato.species === condition);
+  return especie;
+}; 
+
+
+/* ordenar ya voy por ti
+export const ordenarAZ = (data,condition)=>{
+let especie= data.sort();
+} */
+
+
+
+
+
+
+

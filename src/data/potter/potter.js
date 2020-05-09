@@ -20,6 +20,7 @@ export default [
     actor: 'Daniel Radcliffe',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/harry.jpg',
+    card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
   },
   {
     name: 'Hermione Granger',
@@ -42,6 +43,7 @@ export default [
     actor: 'Emma Watson',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/hermione.jpeg',
+    card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
   },
   {
     name: 'Ron Weasley',
@@ -64,6 +66,7 @@ export default [
     actor: 'Rupert Grint',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/ron.jpg',
+    card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
   },
   {
     name: 'Draco Malfoy',
@@ -86,6 +89,7 @@ export default [
     actor: 'Tom Felton',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/draco.jpg',
+    card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
   },
   {
     name: 'Minerva McGonagall',
@@ -108,6 +112,7 @@ export default [
     actor: 'Dame Maggie Smith',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/mcgonagall.jpg',
+    card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
   },
   {
     name: 'Cedric Diggory',
@@ -130,6 +135,7 @@ export default [
     actor: 'Robert Pattinson',
     alive: false,
     image: 'http://hp-api.herokuapp.com/images/cedric.png',
+    card: 'https://i.ibb.co/q5cR9bq/hufflepuff.jpg',
   },
   {
     name: 'Cho Chang',
@@ -152,6 +158,7 @@ export default [
     actor: 'Katie Leung',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/cho.jpg',
+    card: 'https://i.ibb.co/WVPf4mV/ravenclaw.jpg',
   },
   {
     name: 'Severus Snape',
@@ -174,6 +181,7 @@ export default [
     actor: 'Alan Rickman',
     alive: false,
     image: 'http://hp-api.herokuapp.com/images/snape.jpg',
+    card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
   },
   {
     name: 'Rubeus Hagrid',
@@ -196,6 +204,7 @@ export default [
     actor: 'Robbie Coltrane',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/hagrid.png',
+    card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
   },
   {
     name: 'Neville Longbottom',
@@ -218,6 +227,7 @@ export default [
     actor: 'Matthew Lewis',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/neville.jpg',
+    card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
   },
   {
     name: 'Luna Lovegood',
@@ -240,6 +250,7 @@ export default [
     actor: 'Evanna Lynch',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/luna.jpg',
+    card: 'https://i.ibb.co/WVPf4mV/ravenclaw.jpg',
   },
   {
     name: 'Ginny Weasley',
@@ -262,6 +273,7 @@ export default [
     actor: 'Bonnie Wright',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/ginny.jpg',
+    card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
   },
   {
     name: 'Sirius Black',
@@ -284,6 +296,7 @@ export default [
     actor: 'Gary Oldman',
     alive: false,
     image: 'http://hp-api.herokuapp.com/images/sirius.JPG',
+    card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
   },
   {
     name: 'Remus Lupin',
@@ -306,6 +319,7 @@ export default [
     actor: 'David Thewlis',
     alive: false,
     image: 'http://hp-api.herokuapp.com/images/lupin.jpg',
+    card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
   },
   {
     name: 'Arthur Weasley',
@@ -328,6 +342,7 @@ export default [
     actor: 'Mark Williams',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/arthur.jpg',
+    card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
   },
   {
     name: 'Bellatrix Lestrange',
@@ -350,6 +365,7 @@ export default [
     actor: 'Helena Bonham Carter',
     alive: false,
     image: 'http://hp-api.herokuapp.com/images/bellatrix.jpg',
+    card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
   },
   {
     name: 'Lord Voldemort',
@@ -372,6 +388,7 @@ export default [
     actor: 'Ralph Fiennes',
     alive: false,
     image: 'http://hp-api.herokuapp.com/images/voldemort.jpg',
+    card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
   },
   {
     name: 'Horace Slughorn',
@@ -394,6 +411,7 @@ export default [
     actor: 'Jim Broadbent',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/slughorn.JPG',
+    card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
   },
   {
     name: 'Kingsley Shacklebolt',
@@ -416,6 +434,7 @@ export default [
     actor: 'George Harris',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/kingsley.jpg',
+    card: '',
   },
   {
     name: 'Dolores Umbridge',
@@ -438,6 +457,7 @@ export default [
     actor: 'Imelda Staunton',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/umbridge.jpg',
+    card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
   },
   {
     name: 'Lucius Malfoy',
@@ -460,6 +480,7 @@ export default [
     actor: 'Jason Isaacs',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/lucius.jpg',
+    card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
   },
   {
     name: 'Vincent Crabbe',
@@ -482,6 +503,7 @@ export default [
     actor: 'Jamie Waylett',
     alive: false,
     image: 'http://hp-api.herokuapp.com/images/crabbe.jpg',
+    card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
   },
   {
     name: 'Gregory Goyle',
@@ -504,6 +526,7 @@ export default [
     actor: 'Josh Herdman',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/goyle.jpg',
+    card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
   },
   {
     name: 'Mrs Norris',
@@ -526,6 +549,7 @@ export default [
     actor: 'Maxime, Alanis and Tommy the cats',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/norris.JPG',
+    card: '',
   },
   {
     name: 'Argus Filch',
@@ -548,5 +572,6 @@ export default [
     actor: 'David Bradley',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/filch.jpg',
+    card: '',
   },
 ];

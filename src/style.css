@@ -1,75 +1,70 @@
 :root{
-    --color-header: black;
     --color-nav:#049DBF;
     --color-nav-dark: #02687F;
-    --color-section:#03658C;
-    --color-aside: #F1F2EB;
-    --color-footer: #023859;
+    --color-footer:rgba(22, 8, 8, 0.7);
     --color-white: #fff;
     --color-black:#000;
+    --color-h2:#CF9033;
 }
 
 *{
     margin:0;
     padding: 0;
+    text-decoration: none;
 }
 
 body{
     background-image: url(./img/fondo2.gif); 
-    background-size: 100%;
-
+    background-repeat: no-repeat;
+    background-size: 2000px;
+    background-attachment: fixed;
 }
 
 h2{
-    font-family: "BluuNext-Blod";
-    src: url(./font/BluuNext-Blod.otf);
+    font-family: 'HarryPotter7';
+
     font-size: 30px;
-    color: #CF9033;
+    color:var(--color-h2);
     text-align: center;
 }
+
+@font-face {
+    font-family: 'HarryPotter7';
+    src: url('http://www.fontsaddict.com/fontface/harrypotter7.ttf');
+  }
+  
 
 /*Barra superior*/
 .main-header{
     background-color: var(--color-header);
     color: var(--color-while);
-    line-height: 5;
-    text-align: center;
-    color: white;
+    margin: 1%;
 }
 
 .main-nav{
-    background-color: var(--color-nav);
+    background-color: rgba(22, 8, 8, 0.7); 
 }
 
-@media screen and (min-width:768px){
-    .nav-container{
-        display: flex;
-    }
-
-    .nav-containerItem{
-        flex-grow: 1;
-    }
-}
- 
 .nav-containerItem{
     text-align:center;
-    line-height: 2.5;
-    border-bottom: 1px solid var(--color-white);
+    line-height: 2.5; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: initial;
 }
 
 .nav-containerLink{
-    display: block;
     color: var(--color-white);
-    width: 100%;
+ /*    width: 100%; */
 }
 
 /*Seccion de inicio*/
-#pagInicio{
+/* #pagInicio{
     background-color: burlywood;
-}
+} */
 /*logo*/
 #logo{
-    width: 3%;
+    width: 8%;
 }
 
 /*↓menu hamburguesa*/
@@ -79,7 +74,7 @@ h2{
 
 #icone{
     cursor: pointer;
-    padding: 15px;
+    padding: 10%;
     position: absolute;
     z-index: 1;
 }
@@ -130,27 +125,25 @@ h2{
 
 
 /*Seccion de Personajes*/
-#pagPersonajes{
-    display: block;
-    width: 100%;
-    text-align: center;
-    overflow: auto;
-}
-
 .pag-personajes{
-    background-color: rgba(22, 8, 8, 0.7);
-    width: 80%;
+    /* width: 80%; */
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: baseline;
-    align-content: stretch;   
+    justify-content: center;
 }
 
-.select{
-    width: 25%;
-} 
+.selectores{
+    background-color: rgba(222, 196, 157, 0.80);
+    color: black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 12%;
+    right: 10%;
+    margin: 1%;
+    padding: 0.5%;
+/*     font-family: "SofiaProRegular";
+    src: url(./font/SofiaProRegular.otf); */
+    border-radius: 1em;
+    font-size: 1em;    
+}  
 
 .cont-personajes{
     display: flex;
@@ -161,39 +154,82 @@ h2{
     align-content: stretch;
 }
 
-#root{
+#root {
     background-color: rgba(22, 8, 8, 0.7);
     width: 80%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: flex-start;
-    align-content: stretch;    
 }
 
 .card{
-    background-image: url(./img/griffindor1.jpg);
-    background-size: 204px 500px;
-    width: 204px;
-    order: 0;
-    flex: 0 1 auto;
-    align-self: stretch;
-    border: 3px solid white;
+    background-image: url(./img/gryffindor.jpg);
+    background-size: 100% ;
+    width: 10%;
+    right: 30%; 
+    margin: 1%;
+    padding-top: 2%;
+    padding-left: 2.5%;
+    border-radius: 10px;
+}
+.cardgryffindor{
+    background-image: url(./img/gryffindor.jpg);
+    background-size: 100% ;
+    width: 10%;
+    right: 30%; 
+    margin: 1%;
+    padding-top: 2%;
+    padding-left: 2.5%;
     border-radius: 10px;
 }
 
+.cardhufflepuff{
+    background-image: url(./img/hufflepuff.jpg);
+    background-size: 100% ;
+    width: 10%;
+    right: 30%; 
+    margin: 1%;
+    padding-top: 2%;
+    padding-left: 2.5%;
+    border-radius: 10px;
+}
+
+.cardravenclaw{
+    background-image: url(./img/ravenclaw.jpg);
+    background-size: 100% ;
+    width: 10%;
+    right: 30%; 
+    margin: 1%;
+    padding-top: 2%;
+    padding-left: 2.5%;
+    border-radius: 10px;
+}
+
+.cardslytherin{
+    background-image: url(./img/slytherin.jpg);
+    background-size: 100% ;
+    width: 10%;
+    right: 30%; 
+    margin: 1%;
+    padding-top: 2%;
+    padding-left: 2.5%;
+    border-radius: 10px;
+}
+
+
 .imgPersonaje{
-    width: 106px;
-    right: 108px;
-    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .namePersonaje{
     font-family: "BluuNext-Blod";
     src: url(./font/BluuNext-Blod.otf);
     color: #CF9033;
-    font-size: 20px;
+    font-size: 100%;
+    text-align: justify;
 }
 /*footer*/
 footer{
@@ -204,4 +240,14 @@ footer{
     position: fixed;
     text-align: left;
     color: white;
+}
+/*Tablet*/
+@media screen and (min-width:768px){
+    .nav-container{
+        display: flex;
+    }
+
+    .nav-containerItem{
+        flex-grow: 1;
+    }
 }

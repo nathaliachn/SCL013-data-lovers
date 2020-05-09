@@ -14,9 +14,9 @@
         <div class="nav-container">
           <div class="nav-containerItem"><a href="#" ><img src="../img/logoSnitch.png" id="logo"/></a></div>
           <div class="nav-containerItem"><a href="#" class="nav-containerLink">¿Quiénes Somos?</a></div>
-          <div class="nav-containerItem"><a href="#" ><input type="text" placeholder="accio"></a></div>
-          </div>
+          <div class="nav-containerItem"><a href="#" ><input type="text" id="buscador" placeholder="accio"><button id="btnbuscar">Buscar</button></a></div>
         </div>
+      </div>
 
         <input type = "checkbox" id="check">
         <label id="icon" for="check"><img  class="icono-menu" src="./img/icono.png"></label>
@@ -40,56 +40,48 @@
      <section id="pagPersonajes" style = "display:none" >
       <h2>Personajes</h2>
           <div class="pag-personajes">
-              <div class="select"> 
-                <select id="select">
-                  <option value=" ">Filtrar por Casa</option>
-                  <option value="Griffindor">Griffindor</option>
+              <select id="select1" class='selectores'>
+                  <option value="">Filtrar por Casa</option>
+                  <option value="Gryffindor">Gryffindor</option>
                   <option value="Hufflepuff">Hufflepuff</option>
                   <option value="Ravenclaw">Ravenclaw</option>
                   <option value="Slytherin">Slytherin</option>
                 </select>
-              </div>
-              
-              <div class="select">
-              <select id="filtrarLinaje">
+            
+              <select id="select2" class='selectores'>
                 <option value=" ">Filtrar por Linaje</option>
-                <option value="sangrepura">Sangre Pura</option>
-                <option value="sangremestiza">Sangre Mestiza</option>
-                <option value="sagremuggle">Sangre Muggle</option>
+                <option value="pure-blood">Sangre Pura</option>
+                <option value="half-blood">Sangre Mestiza</option>
+                <option value="muggleborn">Sangre Muggle</option>
                 <option value="squib">Squib</option>
               </select>
-              </div>
               
-              <div class="select">
-                <select id="filtrarGenero">
+              <select id="select3" class='selectores'>
                   <option value=" ">Filtrar por Genero</option>
                   <option value="female">Femenino</option>
                   <option value="male">Masculino</option>
                 </select>
-              </div>
 
-              <div class="select">
-                <select id="filtrarEspecie">
+              <select id="select4" class='selectores'>
                   <option value=" ">Filtrar por Especie</option>
-                  <option value="Griffindor">Griffindor</option>
-                  <option value="Hufflepuff">Hufflepuff</option>
-                  <option value="Ravenclaw">Ravenclaw</option>
-                  <option value="Slytherin">Slytherin</option>
+                  <option value="human">Humano</option>
+                  <option value="half-giant">Half-giant</option>
+                  <option value="werewolf">Werewolf</option>
+                  <option value="cat">Gato</option>
                 </select>
-              </div>    
               
-              <div class="select">
-                <select id="ordenarPor">
+
+                <select id="select5" class='selectores'>
                   <option value=" ">Ordenar de:</option>
                   <option value="a-z">a -z </option>
                   <option value="z-a">z -a</option>
                 </select>
-              </div>
           </div>
     
-          <div class="cont-personajes">
+          <div class="cont-personajes" class='selectores'>
           <div id="root"></div><!--contenedor de la Data-->
           </div>
+          <button class="btnGiratiempo">Giratiempo</button>
     </section>
 
     <!--Seccion Historia de la Magia-->
