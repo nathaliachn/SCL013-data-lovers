@@ -21,6 +21,7 @@ export default [
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/harry.jpg',
     card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
+    modal: 'https://i.ibb.co/vXsZMmc/modalG.jpg',
   },
   {
     name: 'Hermione Granger',
@@ -44,6 +45,7 @@ export default [
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/hermione.jpeg',
     card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
+    modal: 'https://i.ibb.co/vXsZMmc/modalG.jpg',
   },
   {
     name: 'Ron Weasley',
@@ -67,6 +69,7 @@ export default [
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/ron.jpg',
     card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
+    modal: 'https://i.ibb.co/vXsZMmc/modalG.jpg',
   },
   {
     name: 'Draco Malfoy',
@@ -90,6 +93,8 @@ export default [
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/draco.jpg',
     card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
+    modal:'https://i.ibb.co/Njy9KN3/modalS.jpg',
+  
   },
   {
     name: 'Minerva McGonagall',
@@ -113,6 +118,7 @@ export default [
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/mcgonagall.jpg',
     card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
+    modal: 'https://i.ibb.co/vXsZMmc/modalG.jpg',
   },
   {
     name: 'Cedric Diggory',
@@ -136,6 +142,8 @@ export default [
     alive: false,
     image: 'http://hp-api.herokuapp.com/images/cedric.png',
     card: 'https://i.ibb.co/q5cR9bq/hufflepuff.jpg',
+    modal: 'https://i.ibb.co/zJ4jDZC/modalH.jpg',
+
   },
   {
     name: 'Cho Chang',
@@ -159,6 +167,8 @@ export default [
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/cho.jpg',
     card: 'https://i.ibb.co/WVPf4mV/ravenclaw.jpg',
+    modal:'https://i.ibb.co/3BXNSYZ/modalR.jpg',
+    
   },
   {
     name: 'Severus Snape',
@@ -182,6 +192,7 @@ export default [
     alive: false,
     image: 'http://hp-api.herokuapp.com/images/snape.jpg',
     card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
+    modal:'https://i.ibb.co/Njy9KN3/modalS.jpg',
   },
   {
     name: 'Rubeus Hagrid',
@@ -205,6 +216,7 @@ export default [
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/hagrid.png',
     card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
+    modal: 'https://i.ibb.co/vXsZMmc/modalG.jpg',
   },
   {
     name: 'Neville Longbottom',
@@ -228,6 +240,7 @@ export default [
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/neville.jpg',
     card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
+    modal: 'https://i.ibb.co/vXsZMmc/modalG.jpg',
   },
   {
     name: 'Luna Lovegood',
@@ -251,6 +264,7 @@ export default [
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/luna.jpg',
     card: 'https://i.ibb.co/WVPf4mV/ravenclaw.jpg',
+    modal:'https://i.ibb.co/3BXNSYZ/modalR.jpg',
   },
   {
     name: 'Ginny Weasley',
@@ -274,6 +288,7 @@ export default [
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/ginny.jpg',
     card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
+    modal: 'https://i.ibb.co/vXsZMmc/modalG.jpg',
   },
   {
     name: 'Sirius Black',
@@ -297,6 +312,7 @@ export default [
     alive: false,
     image: 'http://hp-api.herokuapp.com/images/sirius.JPG',
     card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
+    modal: 'https://i.ibb.co/vXsZMmc/modalG.jpg',
   },
   {
     name: 'Remus Lupin',
@@ -320,6 +336,7 @@ export default [
     alive: false,
     image: 'http://hp-api.herokuapp.com/images/lupin.jpg',
     card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
+    modal: 'https://i.ibb.co/vXsZMmc/modalG.jpg',
   },
   {
     name: 'Arthur Weasley',
@@ -343,6 +360,7 @@ export default [
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/arthur.jpg',
     card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
+    modal: 'https://i.ibb.co/vXsZMmc/modalG.jpg',
   },
   {
     name: 'Bellatrix Lestrange',
@@ -366,6 +384,7 @@ export default [
     alive: false,
     image: 'http://hp-api.herokuapp.com/images/bellatrix.jpg',
     card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
+    modal:'https://i.ibb.co/Njy9KN3/modalS.jpg',
   },
   {
     name: 'Lord Voldemort',
@@ -389,6 +408,7 @@ export default [
     alive: false,
     image: 'http://hp-api.herokuapp.com/images/voldemort.jpg',
     card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
+    modal:'https://i.ibb.co/Njy9KN3/modalS.jpg',
   },
   {
     name: 'Horace Slughorn',
@@ -412,6 +432,7 @@ export default [
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/slughorn.JPG',
     card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
+    modal:'https://i.ibb.co/Njy9KN3/modalS.jpg',
   },
   {
     name: 'Kingsley Shacklebolt',
@@ -435,6 +456,7 @@ export default [
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/kingsley.jpg',
     card: '',
+    modal:'',
   },
   {
     name: 'Dolores Umbridge',
@@ -458,6 +480,7 @@ export default [
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/umbridge.jpg',
     card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
+    modal:'https://i.ibb.co/Njy9KN3/modalS.jpg',
   },
   {
     name: 'Lucius Malfoy',
@@ -481,6 +504,7 @@ export default [
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/lucius.jpg',
     card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
+    modal:'https://i.ibb.co/Njy9KN3/modalS.jpg',
   },
   {
     name: 'Vincent Crabbe',
@@ -504,6 +528,7 @@ export default [
     alive: false,
     image: 'http://hp-api.herokuapp.com/images/crabbe.jpg',
     card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
+    modal:'https://i.ibb.co/Njy9KN3/modalS.jpg',
   },
   {
     name: 'Gregory Goyle',
@@ -527,6 +552,7 @@ export default [
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/goyle.jpg',
     card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
+    modal:'https://i.ibb.co/Njy9KN3/modalS.jpg',
   },
   {
     name: 'Mrs Norris',
@@ -550,6 +576,7 @@ export default [
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/norris.JPG',
     card: '',
+    modal:'',
   },
   {
     name: 'Argus Filch',
@@ -573,5 +600,6 @@ export default [
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/filch.jpg',
     card: '',
+    modal:'',
   },
 ];

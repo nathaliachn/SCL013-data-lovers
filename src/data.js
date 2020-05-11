@@ -49,14 +49,40 @@ export const filterEspecie = (data, condition) =>{
 }; 
 
 
-/* ordenar ya voy por ti
-export const ordenarAZ = (data,condition)=>{
-let especie= data.sort();
-} */
+// Función que ordena personajes por orden a-z, z-a 
+export const orderName = (dataArray, condition) => {
+  let ordenados = dataArray; //Arreglo nuevo donde guarda personajes ordenados
+  if(condition==0){
+    return ordenados;
+  }
+  if(condition == 1){
+    ordenados.sort((a, b) => a.name.localeCompare(b.name));
+    return ordenados;
+  }
+  if(condition==2){
+    ordenados.sort((a, b) => a.name.localeCompare(b.name));
+    const filterOrderReverse=ordenados.reverse();
+    return filterOrderReverse;
+  }
+ 
+}
+/* export default orderName; */
 
 
 
 
-
-
-
+  // Función que busca personajes
+  /* export const buscarPersonaje = (array, string) => {
+    const buscar = [array];
+    const buscararray = buscar.filter((dato) => dato.name
+      .indexOf(string[0].toUpperCase() + string.slice(1).toLowerCase()) > -1);
+      console.log(buscararray)
+    return buscararray;
+  }; */
+// Función que busca personajes
+export const buscarPersonaje = (array, string) => {
+  const buscar = [...array];
+  const buscararray = buscar.filter((obj) => obj.name
+    .indexOf(string[0].toUpperCase() + string.slice(1).toLowerCase()) > -1);
+  return buscararray;
+};

@@ -5,6 +5,7 @@
     --color-white: #fff;
     --color-black:#000;
     --color-h2:#CF9033;
+    --color-hover: #668999;
 }
 
 *{
@@ -12,27 +13,47 @@
     padding: 0;
     text-decoration: none;
 }
+#pagPuerta{
+    background-image: url(./img/puerta.gif); 
+     background-repeat: no-repeat;
+     background-size: 2000px; 
+     /* background-attachment: fixed; */
+ }
 
-body{
-    background-image: url(./img/fondo2.gif); 
+ .puerta{
+    background-image: url(./img/puerta.gif); 
+    
+ }
+
+#pagInicio{
+   background-image: url(./img/fondo2.gif); 
     background-repeat: no-repeat;
-    background-size: 2000px;
+    background-size: 2000px; 
     background-attachment: fixed;
 }
-
-h2{
-    font-family: 'HarryPotter7';
-
-    font-size: 30px;
-    color:var(--color-h2);
-    text-align: center;
-}
-
 @font-face {
     font-family: 'HarryPotter7';
     src: url('http://www.fontsaddict.com/fontface/harrypotter7.ttf');
   }
-  
+ /* video de fondo pagina principal
+    #video {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top:0;
+    left:0;
+    z-index: -1;
+    visibility: visible;
+    overflow: hidden;
+  } */
+
+
+h1{
+    font-family: 'HarryPotter7';
+    font-size: 40px;
+    color:var(--color-h2);
+    text-align: center;
+}
 
 /*Barra superior*/
 .main-header{
@@ -43,28 +64,46 @@ h2{
 
 .main-nav{
     background-color: rgba(22, 8, 8, 0.7); 
+    line-height: 2.5; 
+    display: flex;
+    justify-content: center; 
+    align-items: initial;
+
 }
 
 .nav-containerItem{
-    text-align:center;
     line-height: 2.5; 
+    width: 30.5%;
     display: flex;
-    justify-content: space-between; 
-    align-items: initial;
+    justify-content: start;  
+ /*    align-items: initial; */
 }
-
 .nav-containerLink{
     color: var(--color-white);
- /*    width: 100%; */
+    text-align: center;
+    margin-left: 20%;
+    font-size: 27px;
+}
+.nav-containerLink:hover{
+    background-color: var(--color-hover);
+    border-radius: 10px;
 }
 
-/*Seccion de inicio*/
-/* #pagInicio{
-    background-color: burlywood;
-} */
-/*logo*/
 #logo{
-    width: 8%;
+    width: 36%;
+    padding: 2%;
+    margin-left: -4%;
+}
+
+.inputBuscar{
+    background-image: url(./img/accio.png);
+    background-size: 100% 100%;
+    width: 126%;
+    height: 34%;
+    border-radius: 10px;
+    text-align: center;
+    margin: 12%;
+    margin-left: 183%;
 }
 
 /*↓menu hamburguesa*/
@@ -110,7 +149,8 @@ h2{
 }
 
 .link:hover{
-    background-color: #668999;
+    background-color: var(--color-hover);
+   
 }
 
 #check:checked ~ .barra {
@@ -139,13 +179,14 @@ h2{
     right: 10%;
     margin: 1%;
     padding: 0.5%;
-/*     font-family: "SofiaProRegular";
-    src: url(./font/SofiaProRegular.otf); */
+    font-family: "SofiaProRegular";
+    src: url(./font/SofiaProRegular.otf); 
     border-radius: 1em;
     font-size: 1em;    
 }  
 
 .cont-personajes{
+    background: red;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -154,6 +195,14 @@ h2{
     align-content: stretch;
 }
 
+#resultadobuscar{
+    background-color: rgba(22, 8, 8, 0.7);
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 #root {
     background-color: rgba(22, 8, 8, 0.7);
     width: 80%;
@@ -164,63 +213,21 @@ h2{
 }
 
 .card{
-    background-image: url(./img/gryffindor.jpg);
-    background-size: 100% ;
     width: 10%;
     right: 30%; 
     margin: 1%;
     padding-top: 2%;
     padding-left: 2.5%;
     border-radius: 10px;
-}
-.cardgryffindor{
-    background-image: url(./img/gryffindor.jpg);
-    background-size: 100% ;
-    width: 10%;
-    right: 30%; 
-    margin: 1%;
-    padding-top: 2%;
-    padding-left: 2.5%;
-    border-radius: 10px;
-}
-
-.cardhufflepuff{
-    background-image: url(./img/hufflepuff.jpg);
-    background-size: 100% ;
-    width: 10%;
-    right: 30%; 
-    margin: 1%;
-    padding-top: 2%;
-    padding-left: 2.5%;
-    border-radius: 10px;
-}
-
-.cardravenclaw{
-    background-image: url(./img/ravenclaw.jpg);
-    background-size: 100% ;
-    width: 10%;
-    right: 30%; 
-    margin: 1%;
-    padding-top: 2%;
-    padding-left: 2.5%;
-    border-radius: 10px;
-}
-
-.cardslytherin{
-    background-image: url(./img/slytherin.jpg);
-    background-size: 100% ;
-    width: 10%;
-    right: 30%; 
-    margin: 1%;
-    padding-top: 2%;
-    padding-left: 2.5%;
-    border-radius: 10px;
+    border: 1px solid #000000;
+   
 }
 
 
 .imgPersonaje{
-    width: 100%;
-    height: auto;
+    object-fit: cover;
+    width: 81%;
+    height: 79%;
     border-radius: 10px;
 }
 
@@ -229,8 +236,115 @@ h2{
     src: url(./font/BluuNext-Blod.otf);
     color: #CF9033;
     font-size: 100%;
-    text-align: justify;
+    text-align: center;
 }
+
+
+/*MODAL--FORMA 1 --------------------------*/
+ .modal {
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 160px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modalContent {
+    margin: auto; 
+    padding: 10px;
+    border-radius: 10px;
+    width: 40%;
+    height: 480px;
+}
+.frame{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-size: 100% 100%;
+    border-radius: 20px;
+    height: 100%; 
+}
+.modalinfopersonaje{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.imgPersonajeModal{
+   /*  object-fit: cover; */
+    width: 72%;
+    height: 69%;
+    margin-top: 34%;
+    margin-left: 11%;
+    border-radius: 89px;
+}
+
+    .fotomodal{
+        width: 37%;
+        font-family: 'Abel', sans-serif;
+        font-size: 40px;
+        line-height: 50px;
+        text-align: center;
+        color: #000;
+        margin-top: 10%;
+    }
+                
+    .infomodal{
+        width: 62%;
+        margin-top: -3%;
+        margin-left: 10%;
+        font-size: 20px;
+        line-height: 26px;
+        color: #000;
+
+    }
+
+.close {
+    color: #575353;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+}
+    .close:hover, .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+ 
+/*------------------------------------------------*/
+
+
+@media all and (max-width: 1340px){
+    #modalContent{height: 540px;}
+}
+
+@media all and (max-width: 1273px){
+    #modalContent{height: 600px;}
+}
+
+@media all and (max-width: 1130px){
+    .modalCharacters{
+        flex-direction: column;
+    }
+    #modalContent{
+        height: 830px;
+        width: 60%;
+    }
+    .characterInformation2{
+        padding-top: 30px;
+        text-align: center;
+    }
+    .close{
+        padding-left: 30px;
+    }
+} 
+/*------------------------------------*/
+
+
+
 /*footer*/
 footer{
     background-color: rgba(22, 8, 8, 0.7);
@@ -242,7 +356,27 @@ footer{
     color: white;
 }
 /*Tablet*/
+@media screen and (min-width:420px){
+    .nav-container{
+        display: flex;
+        justify-items: center; 
+    }
+
+    .logo{
+        width: 50%
+    }
+
+}
+
+/*Tablet*/
 @media screen and (min-width:768px){
+    .main-nav{
+        background-color: rgba(22, 8, 8, 0.7); 
+        line-height: 2.5; 
+        display: flex;
+        justify-content: space-around; 
+       /* align-items: initial; */
+    }
     .nav-container{
         display: flex;
     }

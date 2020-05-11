@@ -7,17 +7,26 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
   </head>
   <body>
-
-   <section id="pagInicio">
-      <header class="main-header"></header>
+<!-- <video id='video' loop autoplay preload muted>
+      <source src="./img/fondo.webm" type="video/webm;">
+     </video> --> 
+     <section id="pagPuerta" style="display: block">
+      <div class="puerta">
+      <a href="#" id="gifPuerta">
+        <button id="alohomora"
+          type= button><strong>Alohomora</strong></button>
+        </a>
+      </div>
+     </section>
+   <section id="pagInicio" style = "display:none">
+     <header class="main-header"></header>
       <div class= "main-nav"><!--Menú de navegación-->
-        <div class="nav-container">
-          <div class="nav-containerItem"><a href="#" ><img src="../img/logoSnitch.png" id="logo"/></a></div>
-          <div class="nav-containerItem"><a href="#" class="nav-containerLink">¿Quiénes Somos?</a></div>
-          <div class="nav-containerItem"><a href="#" ><input type="text" id="buscador" placeholder="accio"><button id="btnbuscar">Buscar</button></a></div>
+        <div class= "main-nav"><!--Menú de navegación-->
+            <div class="nav-containerItem"><a href="#" ><img src="../img/logoSnitch1.png" id="logo"/></a></div>
+            <div class="nav-containerItem"><a href="#" class="nav-containerLink">¿Quiénes Somos?</a></div>
+            <div class="nav-containerItem"><a href="#" ><input type="text" id="buscador" class="inputBuscar" placeholder="accio"></a></div>
         </div>
       </div>
-
         <input type = "checkbox" id="check">
         <label id="icon" for="check"><img  class="icono-menu" src="./img/icono.png"></label>
           <div class="barra">
@@ -32,15 +41,15 @@
     </section>
 
     <!--Seccion Bienvenida-->
-    <section id="pagBienvenida" style = "display:block" >
-      <h2>Bienvenido al Mundo Mágico</h2>
+    <section id="pagBienvenida" style = "display:none" >
+      <h1>Bienvenido al Mundo Mágico</h1>
     </section>
 
      <!--Creamos la seccion Personajes-->
      <section id="pagPersonajes" style = "display:none" >
-      <h2>Personajes</h2>
+      <h1>Personajes</h1>
           <div class="pag-personajes">
-              <select id="select1" class='selectores'>
+              <select id="select1" class="selectores">
                   <option value="">Filtrar por Casa</option>
                   <option value="Gryffindor">Gryffindor</option>
                   <option value="Hufflepuff">Hufflepuff</option>
@@ -48,7 +57,7 @@
                   <option value="Slytherin">Slytherin</option>
                 </select>
             
-              <select id="select2" class='selectores'>
+              <select id="select2" class="selectores">
                 <option value=" ">Filtrar por Linaje</option>
                 <option value="pure-blood">Sangre Pura</option>
                 <option value="half-blood">Sangre Mestiza</option>
@@ -56,13 +65,13 @@
                 <option value="squib">Squib</option>
               </select>
               
-              <select id="select3" class='selectores'>
+              <select id="select3" class="selectores">
                   <option value=" ">Filtrar por Genero</option>
                   <option value="female">Femenino</option>
                   <option value="male">Masculino</option>
                 </select>
 
-              <select id="select4" class='selectores'>
+              <select id="select4" class="selectores">
                   <option value=" ">Filtrar por Especie</option>
                   <option value="human">Humano</option>
                   <option value="half-giant">Half-giant</option>
@@ -71,16 +80,23 @@
                 </select>
               
 
-                <select id="select5" class='selectores'>
+                <select id="select5" class="selectores">
                   <option value=" ">Ordenar de:</option>
                   <option value="a-z">a -z </option>
                   <option value="z-a">z -a</option>
                 </select>
           </div>
     
-          <div class="cont-personajes" class='selectores'>
+        <div class="cont-personajes">
           <div id="root"></div><!--contenedor de la Data-->
-          </div>
+          <div id="resultadobuscar"></div>
+        </div>
+      
+<!-- forma 1 modal-->
+             <div id="myModal" class="modal" >
+          <div class="modalContent" id="modalContent" ></div>
+      </div>  
+
           <button class="btnGiratiempo">Giratiempo</button>
     </section>
 
@@ -103,7 +119,7 @@
     <section id="pagHechizos" style = "display:none" >
       <h2>Hechizos</h2>
     </section>
-
+    
     <!--Pie de Página-->
     <footer>@copyright The Golden Snitch</footer>
     <script src="main.js" type="module"></script>
