@@ -51,11 +51,15 @@ HIstoria de ususario 4: Yo COMO: JUgador QUIERO:Tener un buscador donde pueda en
 
 ## 3. Diseño: 
 Para satisfacer las necesidades de nuestros usuarios y que tengan una experiencia magica de inicio a fin, empezamos con un sketch simple:
-![Scketch](https://ibb.co/4JMyRTQ)
-![Scketch](https://ibb.co/nLpKp3y)
+![1](https://i.ibb.co/BzcwxVZ/ndice.jpg)
+
+![1](https://i.ibb.co/gS4ZjLd/ndice2.jpg)
+
 Despues hicimos el prototipo en invision:
-![Protoripo invision](https://ibb.co/Mp2WxXr)}
-![Protoripo invision](https://ibb.co/BTmGX9h)
+
+![Protoripo invision 1](https://i.ibb.co/QQG96hY/invision1.jpg)
+![Protoripo invision 2](https://i.ibb.co/xqqSvWq/invision2.jpg)
+
 y por ultimo nuestro prototipo de alta fidelidad en figma:
 
 
