@@ -5,18 +5,12 @@
 * [1. Resumen del proyecto](#1-resumen-del-proyecto)
 * [2. Historias de usuario](#2-historias-de-usuario)
 * [3. Diseño](#3-Diseño)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Parte adicional-opcional](#6-parte-adicional-opcional)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist](#9-checklist)
 
 ***
 
 ## 1. Resumen del Proyecto:
 
-En este proyecto construimos una página web que nos permite entrar al mundo magico de Harry potter, encontraran un toque de magia en cada paso, historias y datos sobre el mundo magico, a los personajes y sus caracteristicas.
+En este proyecto construimos una página web llamada The Golden Snitch (El nombre hace referencia a una pelota del quidditch que es un deporte en el mundo de harry potter) que nos permite entrar al mundo magico de Harry potter, encontraran un toque de magia en cada paso, historias y datos sobre el mundo magico, a los personajes y sus caracteristicas.
 Los principales usuarios de este producto son: Son los fans de harry potter o tambien llamados Potterheads.
 
 El objetivo principal de este proyecto es diseñar y construir una interfaz web donde los ususarios puedan:
