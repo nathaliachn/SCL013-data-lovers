@@ -44,13 +44,17 @@ Por esto definimos los objetivos especificos, que son:
 ## 2. Historias de usuario:
 
 Despues de entender las necesidades del usuario en base a lo anterior, definimos nuestras historias:
-Historia de ususario 1: Yo COMO : Jugador QUIERO: Ver todos los personajes PARA: para visualizar los que hayan disponibles en la pagina.
-Historia de usuario 2: Yo COMO: Jugador QUIERO: Filtrar los personajes por casa, genero, linaje y especie PARA: Conocer los personajes de mi casa favorita
-Historia de ususario 3: Yo COMO: Jugador QUIERO:Ordenar los personajes de a-z PARA: Encontrar un personaje por su nombre
-HIstoria de ususario 4: Yo COMO: JUgador QUIERO:Tener un buscador donde pueda encontrar por palabras clave lo que quiera acerca de la informacion que me dan en la pagina.
+-Historia de ususario 1: Yo COMO : Jugador QUIERO: Ver todos los personajes PARA: para visualizar los que hayan disponibles en la pagina.
+
+-Historia de usuario 2: Yo COMO: Jugador QUIERO: Filtrar los personajes por casa, genero, linaje y especie PARA: Conocer los personajes de mi casa favorita
+
+-Historia de ususario 3: Yo COMO: Jugador QUIERO:Ordenar los personajes de a-z PARA: Encontrar un personaje por su nombre
+
+-HIstoria de ususario 4: Yo COMO: JUgador QUIERO:Tener un buscador donde pueda encontrar por palabras clave lo que quiera acerca de la informacion que me dan en la pagina.
 
 ## 3. Diseño: 
 Para satisfacer las necesidades de nuestros usuarios y que tengan una experiencia magica de inicio a fin, empezamos con un sketch simple:
+
 ![1](https://i.ibb.co/BzcwxVZ/ndice.jpg)
 
 ![1](https://i.ibb.co/gS4ZjLd/ndice2.jpg)
@@ -58,10 +62,22 @@ Para satisfacer las necesidades de nuestros usuarios y que tengan una experienci
 Despues hicimos el prototipo en invision:
 
 ![Protoripo invision 1](https://i.ibb.co/QQG96hY/invision1.jpg)
+
 ![Protoripo invision 2](https://i.ibb.co/xqqSvWq/invision2.jpg)
 
 y por ultimo nuestro prototipo de alta fidelidad en figma:
 
+ ![inicio](https://i.ibb.co/2dp2ZKF/inicio.jpg)
+ 
+ ![Historia y presentacion](https://i.ibb.co/Zm4MPc2/historia-y-tgs.jpg)
+ 
+ ![personajes 1](https://i.ibb.co/61ZVQpK/personajes.jpg)
+ 
+ ![personajes 2](https://i.ibb.co/R3zmqgt/personajesfiltrados.jpg)
+ 
+ ![hogwarts y patronus](https://i.ibb.co/rHPStfw/hogwartsypatronus.jpg)
+ 
+ ![Varitas](https://i.ibb.co/2dSw8BV/varitas.jpg)
 
 
 
