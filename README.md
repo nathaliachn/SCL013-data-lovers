@@ -5,6 +5,8 @@
 * [1. Resumen del proyecto](#1-resumen-del-proyecto)
 * [2. Historias de usuario](#2-historias-de-usuario)
 * [3. Diseño](#3-Diseño)
+* [4. UX y tests de usabilidad](#4-ux-y-tests-de-usabilidad)
+* [5.planificacion ](#5-planificacion)
 
 ***
 
@@ -80,4 +82,6 @@ y por ultimo nuestro prototipo de alta fidelidad en figma:
  ![Varitas](https://i.ibb.co/2dSw8BV/varitas.jpg)
 
 
+## 4. Ux y tests de usabilidad:
 
+## 5. Planificacion:
