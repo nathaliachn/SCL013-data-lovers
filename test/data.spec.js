@@ -1,4 +1,4 @@
-import { filterName, filterImagen, filterCasa, filterLinaje, filterGenero, filterEspecie} from '../src/data.js';
+import { filterName, filterImagen,filterCasa,filterLinaje, filterGenero, filterEspecie, orderName, buscarPersonaje, filterVarita,filterPatronus} from '../src/data.js';
 
 //test función FilterName
 describe('filterName', () => {
@@ -46,20 +46,19 @@ describe('filterCasa', () =>{
   });
 }); 
 
-/* test('función que filtra por casa', () => {
-  const data = [
-    { image: 'http://hp-api.herokuapp.com/images/harry.jpg' }, 
-    { image: 'http://hp-api.herokuapp.com/images/hermione.jpeg' },
-    { image: 'http://hp-api.herokuapp.com/images/ron.jpg' },
-  ];
-  const house = [
-    "http://hp-api.herokuapp.com/images/harry.jpg", 
-    "http://hp-api.herokuapp.com/images/hermione.jpeg", 
-    "http://hp-api.herokuapp.com/images/ron.jpg"
-  ];
-  expect(filterCasa(data)).toEqual(house);
-}); */
-
+/*   test('función que filtra por casa', () => {
+    const data = [
+      { house: 'Gryffindor' },
+      { house: 'Gryffindor' },
+      { house: 'Gryffindor' },
+      { house: 'Slyntherin' },
+    ];
+    const house = [
+      {house: 'Gryffindor'},
+      {house: 'Gryffindor'},
+      {house: 'Gryffindor'}];
+    expect(filterCasa(data, 'Gryffindor')).toEqual(house);
+  }); */
 
 //test función Filtrar por Linaje
 describe('filterLinaje', () =>{
@@ -82,4 +81,35 @@ describe('filterEspecie', () =>{
   expect(typeof filterEspecie).toBe('function');
   });
 }); 
+
+//test función Ordenar a-z/z-a 
+describe('orderName', () =>{
+  test('debería ser una function', ()=>{
+  expect(typeof orderName).toBe('function');
+  });
+}); 
+
+//test función filtrar varitas
+describe('filterVarita', () =>{
+  test('debería ser una function', ()=>{
+  expect(typeof filterVarita).toBe('function');
+  });
+}); 
+
+//test función filtrar patronus
+describe('filterPatronus', () =>{
+  test('debería ser una function', ()=>{
+  expect(typeof filterPatronus).toBe('function');
+  });
+}); 
+
+
+//test función buscarPersonaje
+describe('buscarPersonaje', () =>{
+  test('debería ser una function', ()=>{
+  expect(typeof buscarPersonaje).toBe('function');
+  });
+}); 
+
+
 

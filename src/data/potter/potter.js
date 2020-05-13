@@ -206,7 +206,7 @@ export default [
     hairColour: 'black',
     wand: {
       wood: 'oak',
-      core: '',
+      core: 'desconocido',
       length: 16,
     },
     patronus: '',
@@ -278,8 +278,8 @@ export default [
     hairColour: 'red',
     wand: {
       wood: 'yew',
-      core: '',
-      length: '',
+      core: 'desconocido',
+      length: 'desconocida',
     },
     patronus: 'horse',
     hogwartsStudent: true,
