@@ -4,19 +4,37 @@
     <meta charset="utf-8">
     <title>The Golden Snitch</title>
     <link rel="stylesheet" href="style.css" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+    <!--<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-
-   <section id="pagInicio">
-      <header class="main-header"></header>
-      <div class= "main-nav"><!--Menú de navegación-->
-        <div class="nav-container">
-          <div class="nav-containerItem"><a href="#" ><img src="../img/logoSnitch.png" id="logo"/></a></div>
-          <div class="nav-containerItem"><a href="#" class="nav-containerLink">¿Quiénes Somos?</a></div>
-          <div class="nav-containerItem"><a href="#" ><input type="text" id="buscador" placeholder="accio"><button id="btnbuscar">Buscar</button></a></div>
-        </div>
-      </div>
+<!--     <video id='video' loop autoplay preload muted>
+      <source src="./img/fondo2.webm" type="video/webm;">
+    </video>  -->
+<!-- <div id="contFondo-puerta">
+     <section id="pagPuerta" style="display: block">
+        <a href="#" id="gifPuerta">
+        <button id="alohomora"
+          type= button><strong>Alohomora</strong></button>
+        </a>
+     </section>
+</div> 
+ 
+</a></div> cierre div contenedor fondo puerta-->
+<!--Menú de navegación-->
+      <header id="pagInicio" style = "display:block">
+   
+        <div class= "ancho">
+          <div class="logo">
+            <p><a href="index.html" class="snitch"></a></p>
+          </div>
+          <nav class="nav-header">
+            <ul class="cont-item">
+              <li class="nav-containerItem"><a href="#">¿Quiénes Somos?</a></li>
+              <li class="nav-containerItem"><input type="text" id="buscador" class="inputBuscar" placeholder="accio"><button id="btnvarita">Accio</button></li>
+            </ul>
+          </nav>  
+        </header>
 
         <input type = "checkbox" id="check">
         <label id="icon" for="check"><img  class="icono-menu" src="./img/icono.png"></label>
@@ -24,23 +42,23 @@
             <nav class="nav-menu">
               <a href="#" id="Historia"><div class="link">Historia de la Mágia</div></a>
               <a href="#" id="MuestraPersonajes"><div class="link">Personajes</div></a>
-              <a href="#"><div class="link">Hogwarts</div></a>
-              <a href="#"><div class="link">Artefactos Mágicos</div></a>
-              <a href="#" id=""><div class="link">Hechizos</div></a>     
+              <a href="#" id="Hogwarts" ><div class="link">Hogwarts</div></a>
+              <a href="#" id="Artefactos"><div class="link">Artefactos Mágicos</div></a>
+              <a href="#" id="Hechizos"><div class="link">Hechizos</div></a>     
             </nav>
           </div>
     </section>
 
     <!--Seccion Bienvenida-->
     <section id="pagBienvenida" style = "display:block" >
-      <h2>Bienvenido al Mundo Mágico</h2>
+      <h1>Bienvenido al Mundo Mágico</h1>
     </section>
 
      <!--Creamos la seccion Personajes-->
      <section id="pagPersonajes" style = "display:none" >
-      <h2>Personajes</h2>
+      <h1>Personajes</h1>
           <div class="pag-personajes">
-              <select id="select1" class='selectores'>
+              <select id="select1" class="selectores">
                   <option value="">Filtrar por Casa</option>
                   <option value="Gryffindor">Gryffindor</option>
                   <option value="Hufflepuff">Hufflepuff</option>
@@ -48,7 +66,7 @@
                   <option value="Slytherin">Slytherin</option>
                 </select>
             
-              <select id="select2" class='selectores'>
+              <select id="select2" class="selectores">
                 <option value=" ">Filtrar por Linaje</option>
                 <option value="pure-blood">Sangre Pura</option>
                 <option value="half-blood">Sangre Mestiza</option>
@@ -56,13 +74,13 @@
                 <option value="squib">Squib</option>
               </select>
               
-              <select id="select3" class='selectores'>
-                  <option value=" ">Filtrar por Genero</option>
+              <select id="select3" class="selectores">
+                  <option value=" ">Filtrar por Género</option>
                   <option value="female">Femenino</option>
                   <option value="male">Masculino</option>
                 </select>
 
-              <select id="select4" class='selectores'>
+              <select id="select4" class="selectores">
                   <option value=" ">Filtrar por Especie</option>
                   <option value="human">Humano</option>
                   <option value="half-giant">Half-giant</option>
@@ -71,39 +89,153 @@
                 </select>
               
 
-                <select id="select5" class='selectores'>
+                <select id="select5" class="selectores">
                   <option value=" ">Ordenar de:</option>
                   <option value="a-z">a -z </option>
                   <option value="z-a">z -a</option>
                 </select>
           </div>
     
-          <div class="cont-personajes" class='selectores'>
+        <div class="cont-personajes">
           <div id="root"></div><!--contenedor de la Data-->
-          </div>
-          <button class="btnGiratiempo">Giratiempo</button>
-    </section>
+        </div>
+       
+      
+<!-- modal personajes-->
+      <div id="myModal" class="modal" >
+          <div class="modalContent" id="modalContent" ></div>
+      
+      </div>  
 
-    <!--Seccion Historia de la Magia-->
+          
+    </section>
+    <!--Seccion ¿quienes somos?------------------------------------------------------------------------------->
+    <section id="pagTGS" style = "display:none" >
+      <h1>The Golden Snitch</h1>
+      <p>
+        ¿Quienes somos?
+       En el mundo actual con la tecnología tenemos la posibilidad de visitar mundos y realidades
+       alternas a la nuestra. The Golden Snitch es eso, una entrada a una realidad mágica del mundo
+       de Harry Potter, para que todos los potterheads puedan sentirse parte de el y saber todo acerca
+       de sus personajes favoritos y algunas curiosidades del mundo mágico.
+       ¿Que significa nuestro nombre?
+       Estamos inspirados en la pelota mas importante del famoso deporte mágico: el Quidditch, creada por
+       Bowman Wright para remplazarla en la cacería de los Snidge (criaturas mágicas que se asemejan a
+       un ave). En las reglas del Quidditch si el buscador atrapa la Snitch dorada se le otorgan 150 puntos
+       al equipo correspondiente y se da por terminado el partido.
+      </p>
+    </section>
+    <!--Seccion Historia de la Magia----------------------------------------------------------------------->
     <section id="pagHistoria" style = "display:none" >
-      <h2>Historia de la Magía</h2>
+      <h1>Historia de la Magía</h1>
+      <p>
+        La historia de la magia proviene desde tiempos remotos. Grandes sucesos han marcado la línea de tiempo del mundo mágico,
+        como la primera convención internacional de brujos en 1289, y la ventisca de jabón de 1378. C.+-
+        A lo largo de los siglos ha sido marcada por famosos mago que incursionaron en la magia oscura,
+        entre ellos Emeric “El Malvado” y Uric “el Chiflado” desarrollaron un sinfín de hechizos y encantamientos tenebrosos.
+        La edad media, fue marcada por el inicio de la casería y la quema de brujas del
+        siglo XIV, una gran masacre que dejo a nuestro mundo de luto por un largo periodo
+        de tiempo. Lo que llevo a la Asamblea medieval de Brujos en Europa a realizar reformas.
+        No podemos olvidarnos, en 1991, de la huelga de gigantes y gárgolas, además de la rebelión de los
+        duendes en el norte del continente europeo, hechos que llevaron a los ministros de magia de todo
+        el mundo a entablar dialogo para formar las bases de lo que sería la convivencia de seres mágicos,
+        transcribiéndolo al código de criaturas mágicas.
+        En los últimos 100 años, los hitos más recientes que han marcado al mundo mágico por completo,
+        nos encontramos con la aparición de mago oscuro Gellert Grindelwald (1883 - 1998). Grindelwald,
+        era un mago búlgaro – ingles de sangre pura, tenía una gran fascinación por la
+        magia oscura y una obsesión con encontrar las famosas reliquias de la muerte. Esto lo llevo a
+        cometer muchos crímenes al rededor del mundo, intento incluso crear un ejército de inferís,
+        los cuales son cadáveres de humanos que han sido poseídos mediante magia oscura para ser
+        controlados por el mago que los crea. Pero su cometido fue interrumpido, ya que Albus Dumbledore
+        logra detenerlo y es encarcelado en la prisión de Askaban, donde años más tarde es asesinado
+        por Lord Voldemort.
+        Lord Voldemort, cuyo nombre real es Tom Marvolo Ryddle (31 de diciembre de 1926 – 2 de mayo de
+        1998) fue el mago tenebroso más poderoso de todos los tiempos.
+        La Primera Guerra Mágica inicio oficialmente partir de 1970 y termina abruptamenteen 1981. Marcó
+        el original "reinado de la oscuridad" de Lord Voldemort.
+        La Rebelión del Señor Oscuro se produjo con la ayuda de sus mortífagos, magos oscuros
+        y brujas que le servían. Llevó el terror tanto muggles como magos.
+        Voldemort y su ejército de mortífagos, se opusieron al Ministerio de Magia y la Orden del Fénix,
+        organización fundada por Albus Dumbledore, la que desempeñó un papel crucial en las dos derrotas
+        contra Lord Voldemort.
+        Bathilda Bagshop
+        Historiadora mágica
+      </p>
     </section>
     
-    <!--Seccion Hogwarts-->
+    <!--Seccion Hogwarts----------------------------------------------------------------------------------->
     <section id="pagHogwarts" style = "display:none" >
-      <h2>Hogwarts</h2>
+      <h1>Hogwarts</h1>
+      <div class="contHogwarts">
+      <p>
+        El Colegio Hogwarts de Magia y Hechicería es un internado mágico ubicado en Escocia.
+        El castillo se ubica en unas montañas cercanas a un lago. La localización exacta no ha
+        sido descubierta ya que está escondida por los más poderosos encantamientos posibles.
+        El lema de Hogwarts es: "Draco dormiens nunquam titillandus" . La traducción es: Nunca
+        hagas cosquillas a un dragón dormido.
+        Hogwarts es una de las tres escuelas más importantes de Europa, este utiliza el sistema
+        de Casas, las cuales son: Gryffindor, Hufflepuff, Ravenclaw y Slytherin; nombradas con el
+        apellido del mago o bruja que la fundó: Godric Gryffindor, Helga Hufflepuff, Rowena Ravenclaw
+        y Salazar Slytherin. Debido a que los estudiantes pasan casi todo su tiempo con compañeros
+        de su casa, esta es una parte importante de Hogwarts.
+      </p>
+      </div>
+
     </section>
 
-    <!--Seccion Artefactos Mágicos-->
+    <!--Seccion Artefactos Mágicos----------------------------------------------------------------------->
     <section id="pagArtefactos" style = "display:none" >
-      <h2>Artefactos Mágicos</h2>
+      <h1>Artefactos Mágicos</h1>
+      <div  id="texto1"><p>Una varita es un instrumento mágico casi sensible a través del cual una bruja o mago canaliza
+        su poder mágico para centralizar los efectos para obtener resultados más complejos.</p></div>
+      <div id="cont-textovaritas">
+          <div class="textovaritas" >
+            <h3>Varita de Sauco</h3>
+            <p>La Varita de Saúco la varita mas poderosa que existe. Mide treinta y cuatro centímetros y
+            medio de largo, es hecha de racimos de madera de Sauco y su núcleo es un pelo de cola de
+            Thestral, que es "una sustancia que sólo aquellos que dominan la muerte pueden controlar".
+            Fue fabricada por el mismo amo de la muerte y entregadas a Ignotus Peverell el primer dueño
+            de la varita de Sauco, desde ahi ha sido una serie de asesinatos por magos que tienen sed de
+            poder, su ultimo dueño fue Harry Potter, el cual destruyo la varita para que nunca mas sea
+            causa de muertes en el mundo magico.</p>
+          </div>
+          <div class="textovaritas">
+            <h3>Olivanders</h3>
+            <p>Las varitas son fabricadas y vendidas por fabricantes de varitas, el más famoso entre ellos
+            se encuentra en Gran Bretaña, Garrick Ollivander, en Francia se encuentra Cosme Acajor y en
+            Europa Oriental se encuentra Mykew Gregorovitch.</p>
+            <h3>Caracteristicas de varitas:</h3>
+            <p>Cada varita consiste en un tipo específico de madera que rodea un núcleo de sustancia mágica.
+              Aunque los núcleos de la varita pueden provenir de la misma criatura, o la madera puede provenir
+              del mismo árbol, no hay dos varitas existentes exactamente iguales.
+            </p>
+          </div>
+      </div>
+      <div id="cont-mostrar" ><!--contenedor de varitas-->
+        <div id="mostrarvaritas" ></div>
+      </div>
     </section>
 
-    <!--Seccion Hechizos-->
+    <!--Seccion Hechizos---------------------------------------------------------------------------->
     <section id="pagHechizos" style = "display:none" >
-      <h2>Hechizos</h2>
+      <h1>Hechizos</h1>
+      <p>
+        Este antiguo y misterioso encantamiento conjura un guardián mágico, una proyección de todos
+        tus sentimientos alegres. El Encantamiento patronus es complicado, y muchas brujas y magos
+        son incapaces de producir un patronus completamente corpóreo, un guardián que por lo general
+        toma la forma del animal con el que comparten una afinidad muy profunda. Quizá lo sospeches,
+        pero no puedes saber qué forma adoptará tu patronus hasta que consigas conjurarlo
+       Miranda Goshawk
+       El Libro de los Hechizos
+      </p>   
+      <div class="cont-hechizos">
+        <div id="mostrarHechizos" ></div>
+      </div>
     </section>
-
+      <div class="cont-busqueda">
+      <div id="resultadobuscar"></div>
+    </div>
+  <!--   <button id="btnGiratiempo">Giratiempo</button> -->
     <!--Pie de Página-->
     <footer>@copyright The Golden Snitch</footer>
     <script src="main.js" type="module"></script>

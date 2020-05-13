@@ -1,26 +1,94 @@
 import dataHarry from './data/potter/potter.js';
-import { filterName, filterImagen,filterCasa,filterLinaje, filterGenero, filterEspecie } from './data.js';
+import { filterName, filterImagen,filterCasa,filterLinaje, filterGenero, filterEspecie, orderName, buscarPersonaje, filterVarita,filterPatronus } from './data.js';
 
 //declaración secciones display     
+//const pagPuerta = document.getElementById('pagPuerta');
 const pagPersonajes = document.getElementById('pagPersonajes');
 const pagBienvenida = document.getElementById('pagBienvenida');
+//const pagInicio = document.getElementById('pagInicio');
 const pagHistoria = document.getElementById('pagHistoria');
+const pagHogwarts = document.getElementById('pagHogwarts');
+const pagArtefactos = document.getElementById('pagArtefactos');
+const pagHechizos = document.getElementById('pagHechizos');
 
+//menu principal id
 const Historia = document.getElementById("Historia");
-//evento del boton muestrapersonajes para mostrar los personajes
+const Hogwarts = document.getElementById("Hogwarts");
+const Artefactos = document.getElementById("Artefactos");
+const Hechizos = document.getElementById("Hechizos");
+
+//evento click en el menu que muestra historia de la mágia
 Historia.addEventListener("click", function(){
     pagBienvenida.style.display = "none";
     pagPersonajes.style.display = "none";
-    pagHistoria.style.display = "block";
-    
+    pagHogwarts.style.display="none";
+    pagHechizos.style.display="none"; 
+    pagArtefactos.style.display="none";
+    pagHistoria.style.display = "block";   
 }, false);
 
+//evento click en el menu para mostrar Hogwarts
+Hogwarts.addEventListener("click", function(){
+    pagBienvenida.style.display = "none";
+    pagPersonajes.style.display = "none";
+    pagHistoria.style.display = "none";
+    pagHogwarts.style.display="block";
+    pagArtefactos.style.display="none"; 
+}, false);
+
+//div contenedor resultado filtro de varitas
+const mostrarvaritas = document.getElementById('mostrarvaritas');
+//evento click en el menu para mostrar artefactos (varitas)
+Artefactos.addEventListener("click", function(){
+    pagBienvenida.style.display = "none";
+    pagPersonajes.style.display = "none";
+    pagHogwarts.style.display="none";
+    pagHistoria.style.display = "none";  
+    pagHechizos.style.display="none"; 
+    pagArtefactos.style.display="block";  
+    document.getElementById('root').innerHTML = " ";//limpia div root
+    let condition = Artefactos.value;
+    let varitaMagica = filterVarita(dataHarry,condition);//arreglo que devuelve las varitas 
+       for(let i = 0; i< varitaMagica.length; i++){
+        mostrarvaritas.innerHTML += `<div class="cardvaritas">
+            <div class="datoWand"><p id="nombrewand">${varitaMagica[i].name}</p>
+            <p>Núcleo: ${varitaMagica[i].wand.core}</p>
+            <p>Madera: ${varitaMagica[i].wand.wood}</p>
+            <p>Longitud: ${varitaMagica[i].wand.length}</p></div>
+    </div>`; 
+      }
+      modalGo(varitaMagica); //funcion que muestra el modal con la info de los personajes  
+}, false);
+
+//contenedor para mostrar los hechizos
+const mostrarHechizos = document.getElementById('mostrarHechizos');
+//evento click en el menu para mostar Hechizos
+Hechizos.addEventListener("click", function(){
+    pagBienvenida.style.display = "none";
+    pagPersonajes.style.display = "none";
+    pagHogwarts.style.display="none";
+    pagHistoria.style.display = "none";
+    pagArtefactos.style.display="none";  
+    pagHechizos.style.display="block";
+    document.getElementById('root').innerHTML = " ";
+    let condition = Hechizos.value;
+    let patronus = filterPatronus(dataHarry,condition);//arreglo con patronus
+       for(let i = 0; i< patronus.length; i++){
+        mostrarHechizos.innerHTML += `<div class="card" style="background-image: url(${patronus[i].card})">
+            <img class="imgPersonaje"  src="${patronus[i].image}">
+            <p class="namePersonaje">Nombre: ${patronus[i].name}</p>
+            <p class="namePersonaje">Patronus: ${patronus[i].patronus}</p>
+    </div>`; 
+      }
+      modalGo(patronus); //funcion que muestra el modal con la info de los personajes  
+
+}, false);
 
 //boton para mostrar personajes con su nombre e imagen
 const MuestraPersonajes = document.getElementById("MuestraPersonajes");
 const container = document.getElementById("root");
 
-//evento del boton muestrapersonajes para mostrar los personajes
+//evento click en el menu para Mostrar personajes y realizar filtrados
 MuestraPersonajes.addEventListener("click", function(){
     document.getElementById('root').innerHTML = " ";
     let condition = MuestraPersonajes.value;
@@ -28,11 +96,16 @@ MuestraPersonajes.addEventListener("click", function(){
     let traeimg = filterImagen(dataHarry,condition);
     pagBienvenida.style.display = "none";
     pagHistoria.style.display = "none";
+    pagArtefactos.style.display="none";  
     pagPersonajes.style.display = "block";
+    pagHechizos.style.display="none"; 
     for(let i = 0; i< traepersonajes.length; i++){
    /*  container.innerHTML += `<div class="card ${traecasa}"><img class="imgPersonaje" src="${traeimg[i]}"><p class="namePersonaje"> ${traepersonajes[i]}</p></div>`; */
-  container.innerHTML += `<div class="card"><img class="imgPersonaje" src="${traeimg[i]}"><p class="namePersonaje"> ${traepersonajes[i]}</p></div>`; 
+  container.innerHTML += `<div class="card" style="background-image: url(${dataHarry[i].card})")>
+  <img class="imgPersonaje"  src="${traeimg[i]}">
+  <div class="textoName"><p class="namePersonaje"> ${traepersonajes[i]}</p></div></div>`; 
       }
+    modalGo(dataHarry); //funcion que muestra el modal con la info de los personajes 
 }, false);
 
 //select filtrar por casa
@@ -42,10 +115,11 @@ select1.addEventListener("change", () =>{
     let condition = select1.options[select1.selectedIndex].text;
     let resultCasa = filterCasa(dataHarry, condition);
     for(let i = 0; i< resultCasa.length; i++){
-        container.innerHTML += `<div class="card"><img class="imgPersonaje" src="${resultCasa[i].image}"><p class="namePersonaje"> ${resultCasa[i].name}</p></div>`;  
-   //console.log(resultCasa) 
+        container.innerHTML += `<div class="card" style="background-image: url(${resultCasa[i].card})">
+        <img class="imgPersonaje"src="${resultCasa[i].image}">
+        <div class="textoName"><p class="namePersonaje"> ${resultCasa[i].name}</p></div></div>`;  
+        modalGo(resultCasa);// funcion que muestra el modal con la info de los personajes
 }
-     
 });
 
 //select filtrar por Linaje
@@ -55,8 +129,11 @@ select2.addEventListener("change", () =>{
     let condition2 = select2.options[select2.selectedIndex].value;
     let resultLinaje = filterLinaje(dataHarry, condition2);
     for(let i = 0; i< resultLinaje.length; i++){
-        container.innerHTML += `<div class="card"><img class="imgPersonaje" src="${resultLinaje[i].image}"><p class="namePersonaje"> ${resultLinaje[i].name}</p></div>`;  
-} 
+        container.innerHTML += `<div class="card" style="background-image: url(${resultLinaje[i].card})">
+        <img class="imgPersonaje" src="${resultLinaje[i].image}">
+        <div class="textoName"><p class="namePersonaje"> ${resultLinaje[i].name}</p></div></div>`;  
+       modalGo(resultLinaje); // funcion que muestra el modal con la info de los personajes
+    } 
 });
 
 //select filtrar por Genero
@@ -66,8 +143,11 @@ select3.addEventListener("change", () =>{
     let condition3 = select3.options[select3.selectedIndex].value;
     let resultGenero = filterGenero(dataHarry, condition3);
     for(let i = 0; i< resultGenero.length; i++){
-        container.innerHTML += `<div class="card"><img class="imgPersonaje" src="${resultGenero[i].image}"><p class="namePersonaje"> ${resultGenero[i].name}</p></div>`;  
-} 
+        container.innerHTML += `<div class="card" style="background-image: url(${resultGenero[i].card})">
+        <img class="imgPersonaje" src="${resultGenero[i].image}">
+        <div class="textoName"><p class="namePersonaje"> ${resultGenero[i].name}</p></div></div>`;  
+        modalGo(resultGenero); //funcion que muestra el modal con la info de los personajes
+    } 
 });
  
 //select filtrar por Especie
@@ -77,32 +157,97 @@ select4.addEventListener("change", () =>{
     let condition4 = select4.options[select4.selectedIndex].value;
     let resultEspecie = filterEspecie(dataHarry, condition4);
     for(let i= 0; i<resultEspecie.length; i++){
-        container.innerHTML += `<div class="card"><img class="imgPersonaje" src="${resultEspecie[i].image}"><p class="namePersonaje"> ${resultEspecie[i].name}</p></div>`;  
+        container.innerHTML += `<div class="card" style="background-image: url(${resultEspecie[i].card})">
+        <img class="imgPersonaje" style="background-image: url(${dataHarry[i].card}) src="${resultEspecie[i].image}">
+        <div class="textoName"><p class="namePersonaje"> ${resultEspecie[i].name}</p></div></div>`;  
+        modalGo(resultEspecie);// funcion que muestra el modal con la info de los personajes
     }
 })
 
-//ordenar por a-z y z-a
+  //ordenar de la a-z y z-a
+  const select5 = document.getElementById("select5");
+  select5.addEventListener("change", () =>{
+      container.innerHTML = "";
+      let condition = select5.options[select5.selectedIndex].index;
+      let ordenados = orderName(dataHarry, condition);
+      
+      for(let i=0;i<ordenados.length;i++){    
+          container.innerHTML += `<div class="card" style="background-image: url(${ordenados[i].card})")>
+          <img class="imgPersonaje"  src="${ordenados[i].image}">
+          <div class="textoName"><p class="namePersonaje"> ${ordenados[i].name}</p></div></div>`;  
+       }
+  })
 
-
-
-//buscar 
-/* const buscador = document.querySelector('#buscador');
-const boton = document.querySelector('btnbuscar');
-const resultado = document.querySelector('root');
-
-const filtrarPersonajes = () =>{
-    document.getElementById('root').innerHTML = " ";
-    const texto = buscador.value.toLowerCase();
-    for (let data of dataHarry){
-        let name = data.name.toLowerCase();
-        if(name.indexOF(texto) !== -1){
-           resultado.innerHTML += `<div class="card">${data.name}</div>`;
+ 
+  // Función que muestra los resultados de búsqueda 
+  const resultadobuscar = document.getElementById('resultadobuscar');  //contenedor div
+  const btnvarita = document.getElementById('btnvarita');//boton
+  const buscador = document.getElementById('buscador');//input
+  
+  btnvarita.addEventListener('click', () => {
+    resultadobuscar.innerHTML = "";//limpia div
+    const resultado = buscarPersonaje(dataHarry, buscador.value);//interaccion con data.js
+    console.log(resultado)
+       for(let i=0; i < resultado.length; i++) { 
+            if(buscador < 0){
+                resultadobuscar.innerHTML += `
+                <div class="card" style="background-image: url(${resultado[i].card})">
+                <img class="imgPersonaje" style="background-image: url(${dataHarry[i].card}) src="${resultado[i].image}">
+                <div class="textoName"><p class="namePersonaje"> ${resultado[i].name}</p></div></div>`;  
+                console.log(resultado)
+             }else{
+                resultadobuscar.innerHTML = "";
+             }             
         }
-    }
-    if(resultado.innerHTML === ""){
-        resultado.innerHTML += `<div>Personaje no está</div>` ;
-    }
-}
-boton.addEventListener('click', filtrarPersonajes);
-buscador.addEventListener ('keyup', filtrarPersonajes);
-filtrarPersonajes(); */
+  });
+ /*boton giratiempo para volver atras*/
+/* const btnGiratiempo = document.getElementById('btnGiratiempo');
+  btnGiratiempo.addEventListener('click', () => {
+    window.location.reload();
+  }); 
+ */
+
+//MODAL : muestra información de los personajes 
+function modalGo (dataHarry) {
+    let modal=document.getElementById("myModal"); 
+    let modalContainer = document.getElementById("modalContent"); 
+    let imgPersonaje=document.getElementsByClassName("imgPersonaje"); 
+    modal.style.display = "none"; //mantiene oculto el modal
+
+    for(let i=0; i<imgPersonaje.length; i++){ 
+        let img=imgPersonaje[i]; 
+        
+        img.addEventListener ('click', ()=>{ 
+            modalContainer.innerHTML="";//limpia modal
+            modal.style.display = "block"; //muestra modal       
+            //se inserta información de los personajes dinamicamente en html
+            modalContainer.innerHTML += ` 
+            <div class="frame" style="background-image: url(${dataHarry[i].modal})">
+                 <div  class="modalinfopersonaje">
+                    <div class="fotomodal">
+                        <img src="${dataHarry[i].image}" alt="" class="imgPersonajeModal">
+                    </div>
+                    <div class="infomodal">
+                        <h2>${dataHarry[i].name}</h2><br>
+                        <p>Casa:${dataHarry[i].house}</p>
+                        <p>Especie: ${dataHarry[i].species}</p>
+                        <p>Género: ${dataHarry[i].gender}</p>
+                        <p>Fecha de nacimiento: ${dataHarry[i].dateOfBirth}</p>
+                        <p>Ascendencia: ${dataHarry[i].ancestry}</p>
+                        <p>Color de ojos: ${dataHarry[i].eyeColour}</p>
+                        <p>Color de cabello: ${dataHarry[i].hairColour}</p>
+                        <p>Actor/Actriz: ${dataHarry[i].actor}</p>
+                    </div>
+                </div>
+            </div>`;
+        }); 
+
+        window.onclick = function(event) { //al hacer click fuera del modal se cierre
+            if (event.target == modal) {
+              modal.style.display = "none";//vuelve a ocultar el modal 
+              modalContainer.innerHTML="";//Limpiamos el modal con la informacion
+            }
+        }
+    }   
+} 
+
