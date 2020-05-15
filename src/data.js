@@ -35,7 +35,7 @@ export const filterGenero = (data, condition) =>{
   return genero;
 }; 
 
-//filtro por Género
+//filtro por Especie
 export const filterEspecie = (data, condition) =>{
   let especie = data.filter((dato) => dato.species === condition);
   return especie;
@@ -43,11 +43,11 @@ export const filterEspecie = (data, condition) =>{
 
 
 // Función que ordena personajes por orden a-z, z-a 
-export const orderName = (dataArray, condition) => {
-  let ordenados = dataArray; //Arreglo nuevo donde guarda personajes ordenados
-  if(condition==0){
+export const orderName = (data, condition) => {
+  let ordenados = data; //Arreglo nuevo donde guarda personajes ordenados
+ if(condition==0){
     return ordenados;
-  }
+  } 
   if(condition == 1){
     ordenados.sort((a, b) => a.name.localeCompare(b.name));
     return ordenados;
@@ -71,11 +71,14 @@ export const filterPatronus = (data) => {
   let patronus = data.filter((dato) => dato.patronus !== '');
   return patronus;
 };
- // buscador 
- export const buscarPersonaje = (data,nombre) => {
-  let resultado = data.filter((dato) => dato.name.toLowerCase().includes(nombre))
-  console.log(resultado)
-  return resultado;
-}
+
+// Función que busca personajes
+export const buscarPersonaje = (array, string) => {
+  const arrOfSearch = [...array];
+  const newArrOfSearch = arrOfSearch.filter((obj) => obj.name
+    .indexOf(string[0].toUpperCase() + string.slice(1).toLowerCase()) > -1);
+  return newArrOfSearch;
+};
  
+
 
