@@ -22,6 +22,8 @@ export default [
     image: 'http://hp-api.herokuapp.com/images/harry.jpg',
     card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
     modal: 'https://i.ibb.co/vXsZMmc/modalG.jpg',
+    varita: 'https://i.ibb.co/v4HHcn7/harry.jpg',
+    hechizo: 'https://i.ibb.co/09mK3F7/harrystag.jpg',
   },
   {
     name: 'Hermione Granger',
@@ -46,6 +48,8 @@ export default [
     image: 'http://hp-api.herokuapp.com/images/hermione.jpeg',
     card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
     modal: 'https://i.ibb.co/vXsZMmc/modalG.jpg',
+    varita: 'https://i.ibb.co/hBC2xCG/hermione.jpg',
+    hechizo: 'https://i.ibb.co/jyPc8Bk/hermioneotter.jpg',
   },
   {
     name: 'Ron Weasley',
@@ -70,6 +74,8 @@ export default [
     image: 'http://hp-api.herokuapp.com/images/ron.jpg',
     card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
     modal: 'https://i.ibb.co/vXsZMmc/modalG.jpg',
+    varita: 'https://i.ibb.co/Cmftr3g/ron.jpg',
+    hechizo: 'https://i.ibb.co/PmPp9f8/ronjackrusselterrier.jpg',
   },
   {
     name: 'Draco Malfoy',
@@ -94,7 +100,8 @@ export default [
     image: 'http://hp-api.herokuapp.com/images/draco.jpg',
     card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
     modal:'https://i.ibb.co/Njy9KN3/modalS.jpg',
-  
+    varita: 'https://i.ibb.co/7R7DWSv/draco.jpg',
+    hechizo: '',
   },
   {
     name: 'Minerva McGonagall',
@@ -119,6 +126,8 @@ export default [
     image: 'http://hp-api.herokuapp.com/images/mcgonagall.jpg',
     card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
     modal: 'https://i.ibb.co/vXsZMmc/modalG.jpg',
+    varita: '',
+    hechizo: 'https://i.ibb.co/mcR7TTM/minervatabbycat.jpg',
   },
   {
     name: 'Cedric Diggory',
@@ -143,6 +152,8 @@ export default [
     image: 'http://hp-api.herokuapp.com/images/cedric.png',
     card: 'https://i.ibb.co/q5cR9bq/hufflepuff.jpg',
     modal: 'https://i.ibb.co/zJ4jDZC/modalH.jpg',
+    varita: 'https://i.ibb.co/qJjH9rR/cedric.jpg',
+    hechizo:'',
 
   },
   {
@@ -168,6 +179,8 @@ export default [
     image: 'http://hp-api.herokuapp.com/images/cho.jpg',
     card: 'https://i.ibb.co/WVPf4mV/ravenclaw.jpg',
     modal:'https://i.ibb.co/3BXNSYZ/modalR.jpg',
+    varita: '',
+    hechizo:'https://i.ibb.co/3MzrvWY/choswan.jpg',
     
   },
   {
@@ -193,6 +206,8 @@ export default [
     image: 'http://hp-api.herokuapp.com/images/snape.jpg',
     card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
     modal:'https://i.ibb.co/Njy9KN3/modalS.jpg',
+    varita: '',
+    hechizo:'https://i.ibb.co/GcG9kRf/severusdoe.jpg',
   },
   {
     name: 'Rubeus Hagrid',
@@ -217,6 +232,8 @@ export default [
     image: 'http://hp-api.herokuapp.com/images/hagrid.png',
     card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
     modal: 'https://i.ibb.co/vXsZMmc/modalG.jpg',
+    varita: 'https://i.ibb.co/k9FQ8gH/rubeus.jpg',
+    hechizo:'',
   },
   {
     name: 'Neville Longbottom',
@@ -241,6 +258,8 @@ export default [
     image: 'http://hp-api.herokuapp.com/images/neville.jpg',
     card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
     modal: 'https://i.ibb.co/vXsZMmc/modalG.jpg',
+    varita: 'https://i.ibb.co/sF60Kr6/neville.jpg',
+    hechizo: '',
   },
   {
     name: 'Luna Lovegood',
@@ -265,6 +284,8 @@ export default [
     image: 'http://hp-api.herokuapp.com/images/luna.jpg',
     card: 'https://i.ibb.co/WVPf4mV/ravenclaw.jpg',
     modal:'https://i.ibb.co/3BXNSYZ/modalR.jpg',
+    varita: '',
+    hechizo: 'https://i.ibb.co/tB3s4qN/lunahare.jpg" ',
   },
   {
     name: 'Ginny Weasley',
@@ -289,6 +310,8 @@ export default [
     image: 'http://hp-api.herokuapp.com/images/ginny.jpg',
     card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
     modal: 'https://i.ibb.co/vXsZMmc/modalG.jpg',
+    varita: 'https://i.ibb.co/JvnL0Kt/ginny.jpg',
+    hechizo: 'https://i.ibb.co/bB96NHn/ginnyhorse.jpg',
   },
   {
     name: 'Sirius Black',
@@ -313,6 +336,8 @@ export default [
     image: 'http://hp-api.herokuapp.com/images/sirius.JPG',
     card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
     modal: 'https://i.ibb.co/vXsZMmc/modalG.jpg',
+    varita:'',
+    hechizo: 'https://i.ibb.co/dgdv72p/sirusblackhare.jpg',
   },
   {
     name: 'Remus Lupin',
@@ -337,6 +362,8 @@ export default [
     image: 'http://hp-api.herokuapp.com/images/lupin.jpg',
     card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
     modal: 'https://i.ibb.co/vXsZMmc/modalG.jpg',
+    varita: 'https://i.ibb.co/frLmB7Z/remus.jpg',
+    hechizo: 'https://i.ibb.co/PM7DTQD/remuswolf.jpg',
   },
   {
     name: 'Arthur Weasley',
@@ -361,6 +388,8 @@ export default [
     image: 'http://hp-api.herokuapp.com/images/arthur.jpg',
     card: 'https://i.ibb.co/VBYXxmf/gryffindor.jpg',
     modal: 'https://i.ibb.co/vXsZMmc/modalG.jpg',
+    varita: '',
+    hechizo:'https://i.ibb.co/fSGRp0P/arturweasel.jpg',
   },
   {
     name: 'Bellatrix Lestrange',
@@ -385,6 +414,8 @@ export default [
     image: 'http://hp-api.herokuapp.com/images/bellatrix.jpg',
     card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
     modal:'https://i.ibb.co/Njy9KN3/modalS.jpg',
+    varita: 'https://i.ibb.co/R9g5gJC/beatrix.jpg',
+    hechizo:'',
   },
   {
     name: 'Lord Voldemort',
@@ -409,6 +440,8 @@ export default [
     image: 'http://hp-api.herokuapp.com/images/voldemort.jpg',
     card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
     modal:'https://i.ibb.co/Njy9KN3/modalS.jpg',
+    varita: 'https://i.ibb.co/4TVz4yg/voldemort.jpg',
+    hechizo: '',
   },
   {
     name: 'Horace Slughorn',
@@ -433,6 +466,8 @@ export default [
     image: 'http://hp-api.herokuapp.com/images/slughorn.JPG',
     card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
     modal:'https://i.ibb.co/Njy9KN3/modalS.jpg',
+    varita: 'https://i.ibb.co/pR6w9z6/horace.jpg',
+    hechizo:'',
   },
   {
     name: 'Kingsley Shacklebolt',
@@ -455,8 +490,10 @@ export default [
     actor: 'George Harris',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/kingsley.jpg',
-    card: '',
-    modal:'',
+    card: 'https://i.ibb.co/2qsQJkF/sincasa.jpg',
+    modal:'https://i.ibb.co/fGk67kz/modasincasa.jpg',
+    varita: '',
+    hechizo:'https://i.ibb.co/ZY0dmdd/kingsleylynx.jpg',
   },
   {
     name: 'Dolores Umbridge',
@@ -481,6 +518,8 @@ export default [
     image: 'http://hp-api.herokuapp.com/images/umbridge.jpg',
     card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
     modal:'https://i.ibb.co/Njy9KN3/modalS.jpg',
+    varita: 'https://i.ibb.co/cJjwj6m/dolores.jpg',
+    hechizo:'https://i.ibb.co/D7ykrxG/persiancat.jpg',
   },
   {
     name: 'Lucius Malfoy',
@@ -505,6 +544,8 @@ export default [
     image: 'http://hp-api.herokuapp.com/images/lucius.jpg',
     card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
     modal:'https://i.ibb.co/Njy9KN3/modalS.jpg',
+    varita: 'https://i.ibb.co/8YxgKbp/lucius.jpg',
+    hechizo:'',
   },
   {
     name: 'Vincent Crabbe',
@@ -529,6 +570,8 @@ export default [
     image: 'http://hp-api.herokuapp.com/images/crabbe.jpg',
     card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
     modal:'https://i.ibb.co/Njy9KN3/modalS.jpg',
+    varita: '',
+    hechizo:'',
   },
   {
     name: 'Gregory Goyle',
@@ -553,6 +596,8 @@ export default [
     image: 'http://hp-api.herokuapp.com/images/goyle.jpg',
     card: 'https://i.ibb.co/L5rvSqJ/slytherin.jpg',
     modal:'https://i.ibb.co/Njy9KN3/modalS.jpg',
+    varita: '',
+    hechizo:'',
   },
   {
     name: 'Mrs Norris',
@@ -575,8 +620,10 @@ export default [
     actor: 'Maxime, Alanis and Tommy the cats',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/norris.JPG',
-    card: '',
-    modal:'',
+    card: 'https://i.ibb.co/2qsQJkF/sincasa.jpg',
+    modal:'https://i.ibb.co/fGk67kz/modasincasa.jpg',
+    varita: '',
+    hechizo:'',
   },
   {
     name: 'Argus Filch',
@@ -599,7 +646,12 @@ export default [
     actor: 'David Bradley',
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/filch.jpg',
-    card: '',
-    modal:'',
+    card: 'https://i.ibb.co/2qsQJkF/sincasa.jpg',
+    modal:'https://i.ibb.co/fGk67kz/modasincasa.jpg',
+    varita: '',
+    hechizo:'',
   },
 ];
+
+
+
