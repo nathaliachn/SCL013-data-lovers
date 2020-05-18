@@ -45,19 +45,17 @@ export const filterEspecie = (data, condition) =>{
 // Función que ordena personajes por orden a-z, z-a 
 export const orderName = (data, condition) => {
   let ordenados = data; //Arreglo nuevo donde guarda personajes ordenados
- if(condition==0){
-    return ordenados;
-  } 
   if(condition == 1){
     ordenados.sort((a, b) => a.name.localeCompare(b.name));
     return ordenados;
   }
   if(condition==2){
     ordenados.sort((a, b) => a.name.localeCompare(b.name));
-    const filterOrderReverse=ordenados.reverse();
-    return filterOrderReverse;
+    const arrayreverse=ordenados.reverse();
+    return arrayreverse;
   }
-}
+}  
+
 
 //filtro varita
  export const filterVarita = (data) => {
@@ -73,12 +71,14 @@ export const filterPatronus = (data) => {
 };
 
 // Función que busca personajes
-export const buscarPersonaje = (array, string) => {
-  const arrOfSearch = [...array];
-  const newArrOfSearch = arrOfSearch.filter((obj) => obj.name
-    .indexOf(string[0].toUpperCase() + string.slice(1).toLowerCase()) > -1);
-  return newArrOfSearch;
+export const buscarPersonaje = (data, nombre) => {
+  const arrSearch = [...data];
+  console.log(arrSearch)
+  const newarray = arrSearch.filter((dato) => dato.name
+    .indexOf(nombre[0].toUpperCase() + nombre.slice(1).toLowerCase()) > -1);
+    console.log(newarray)
+  return newarray;
 };
+
+
  
-
-

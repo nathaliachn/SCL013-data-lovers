@@ -14,6 +14,11 @@
     padding: 0;
     text-decoration: none;
 }
+
+/* html, body{
+    cursor: url('http://cur.cursors-4u.net/others/images3/oth247.png'), auto;
+
+}  */
 /*fondo*/
 body{
     background-image: url(./img/fondo2.jpg); 
@@ -157,7 +162,7 @@ h1{
     box-sizing:border-box ;
 }
 
-#btnvarita {
+#btnaccio {
     background-color: rgba(222, 196, 157, 0.80);
     color: black;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -240,41 +245,51 @@ h1{
 /*Quienes somos*/
 #pagTGS{
     width: 80%;
-    border: 2px solid yellow;
     margin-left: 12%;
-    margin-top: 1%;
-    
+    margin-top: 1%;  
 }
 
 .cont-snitch{
-    background-color: rgba(22, 8, 8, 0.7);
+/*     background-color: rgba(22, 8, 8, 0.7); */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    width: 80%;
-    margin-left: 12%;
-    width: 30%;
+    width: 82%;
+    margin-top: 1%;
+    margin-left: 10%;
 }
 
 #textosnitch1{
+    width: 50%;
     font-family: 'BlueTitulos';
-    font-size: 10px;
-    background-color: red;
+    font-size: 1.5em;
+    background-color:rgba(2, 6, 38, 0.7);
+    padding: 1%;
+    color: white;
+    border-radius: 20px;
+    letter-spacing: 1px;
 }
 .centrosnitch{
     background-color: seashell;
-    width: 30%;
+    width: 20%;
 }
 
 .imgsnitch{
-    background-color:blue;
-    width: 30%;
+    width: 80%;
+    height: 553px;
+    border-radius: 266px;
+    margin-left: 10%;  
 }
 
 #textosnitch2{
+    width: 50%;
     font-family: 'BlueTitulos';
-    font-size: 10px;
-    background-color: red;
+    font-size: 1.5em;
+    background-color: rgba(2, 6, 38, 0.7);
+    padding: 1%;
+    color: white;
+    border-radius: 20px;
+    letter-spacing: 1px;
 }
 
 /*Seccion Historia*/
@@ -285,13 +300,15 @@ h1{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-left: 12%;
+    margin-top: 1%;
 }
 
 /*Seccion de Personajes*/
 .pag-personajes{
-    /* width: 80%; */
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .selectores{
@@ -315,6 +332,7 @@ h1{
     align-content: stretch;
 }
 
+
 #resultadobuscar{
     background-color: rgba(22, 8, 8, 0.7);
     width: 80%;
@@ -322,6 +340,8 @@ h1{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-left: 12%;
+    margin-top: 1%;
 }
 #root {
     background-color: rgba(22, 8, 8, 0.7);
@@ -431,13 +451,14 @@ h3{
 
 /*padre de textos varitas*/
 #cont-textovaritas{
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     width: 100%;
     height: 55%;
     padding: 2%;
-    /* box-sizing: border-box; */
     margin: 1px;
 }
 /*hijo cont-textosvaritas*/
@@ -468,49 +489,44 @@ h3{
 
 /*padre mostrarvaritas*/
 #cont-mostrar{
+    background-color: rgba(22, 8, 8, 0.7); 
+    width: 100%;
+    height: 997px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-around; 
 }
 /*hijo cont-mostrar*/
 #mostrarvaritas{
-    background-color:  rgba(22, 8, 8, 0.7);
-    width: 100%;
+    width: 89%; 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 12%;
+    justify-content: space-evenly;
 }
 
 .cardvaritas {
     width: 18%;
-    height: 23%;
+    height: 16%;
     margin: 1%;
     padding-top: 11%;
     border-radius: 10px;
     background-size: 100% 100%;
-    display: flex;
-    flex-direction: column;
+  /*   display: flex;
+    flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
-
+    flex-wrap: wrap;
+    align-items: center; */
 }
 
-/* .imgPersonajevarita {
-    object-fit: cover;
-    width: 81%;
-    height: 79%;
-    border-radius: 10px;
-    border: 1px solid rgb(0, 255, 0);
-}
- */
 .datoWand{
     font-family: 'Sofia';
     font-size: 18px;
     line-height: 25px;
     color: wheat;
+    margin-left: 27px;
+    margin-top: -10%;
 }
 #nombrewand{
     text-align: center;
@@ -531,7 +547,6 @@ h3{
 }
 
 .textohechizos{
-    border: 1px solid yellow;
     background-color: rgba(2, 6, 38, 0.7);
     width: 60%;
     margin-left: 20%;
@@ -670,29 +685,60 @@ footer{
     }
 }
 
-
-@media all and (max-width: 1340px){
-    #modalContent{height: 540px;}
+/*Celular*/
+@media screen and (max-width:425px){
+    /*personajes*/
+ 
+    .selectores{
+        width: 50%;
+        margin: 1%;
+        padding: 0.5%;
+        font-family: "Sofia";
+        border-radius: 1em;
+       font-size: 1em;    
+   
+    }  
+/*SECCION hogwarts*/
+.pagHogwarts{
+    width: 80%;
+    margin-left: 10%;
+}
+.contHogwarts{
+    background-image: none;
+    background-color: rgba(22, 8, 8, 0.7);
+    width: 80%;
+    height: 1200px;
+    border-radius: 50px;
+    margin-left: 8%;
+}
+.textohogwarts{
+    width: 74%;
+    height: 55px;
+    line-height: 31px;
+    margin-left: 14%;
+    margin-top: 6%;
 }
 
-@media all and (max-width: 1273px){
-    #modalContent{height: 600px;}
+/*MODAL----------------------------*/
+
+.modalContent {
+    margin: auto; 
+    width: 98%;
+    height: 380px;
+}
+.modalinfopersonaje{
+    margin-left: 0.5%;
+}
+                  
+.infomodal{
+    width: 50%;
+    margin-top: -3%;
+    font-size: 17px;
+    line-height: 18px;
+    }
+
+
+
 }
 
-@media all and (max-width: 1130px){
-    .modalCharacters{
-        flex-direction: column;
-    }
-    #modalContent{
-        height: 830px;
-        width: 60%;
-    }
-    .characterInformation2{
-        padding-top: 30px;
-        text-align: center;
-    }
-    .close{
-        padding-left: 30px;
-    }
-} 
-/*------------------------------------*/
+

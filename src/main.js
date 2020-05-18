@@ -1,5 +1,5 @@
 import dataHarry from './data/potter/potter.js';
-import { filterName, filterImagen,filterCasa,filterLinaje, filterGenero, filterEspecie, orderName, filterVarita,filterPatronus } from './data.js';
+import { filterName, filterImagen,filterCasa,filterLinaje, filterGenero, filterEspecie, orderName, filterVarita,filterPatronus,buscarPersonaje } from './data.js';
 
 //declaración secciones display     
 //const pagPuerta = document.getElementById('pagPuerta');
@@ -11,6 +11,7 @@ const pagHogwarts = document.getElementById('pagHogwarts');
 const pagArtefactos = document.getElementById('pagArtefactos');
 const pagHechizos = document.getElementById('pagHechizos');
 const pagTGS = document.getElementById('pagTGS');
+
 
 //menu principal id
 const Historia = document.getElementById("Historia");
@@ -28,7 +29,7 @@ quienesSomos.addEventListener("click", function(){
     pagArtefactos.style.display="none";
     pagHistoria.style.display = "none";  
     pagTGS.style.display = "block";  
-
+    contBuscar.innerHTML = " ";
 }, false);
 
 //evento click en el menu que muestra historia de la mágia
@@ -39,7 +40,8 @@ Historia.addEventListener("click", function(){
     pagHogwarts.style.display="none";
     pagHechizos.style.display="none"; 
     pagArtefactos.style.display="none";
-    pagHistoria.style.display = "block";   
+    pagHistoria.style.display = "block"; 
+    contBuscar.innerHTML = " ";  
 }, false);
 
 //evento click en el menu para mostrar Hogwarts
@@ -51,6 +53,8 @@ Hogwarts.addEventListener("click", function(){
     pagArtefactos.style.display="none"; 
     pagHechizos.style.display="none";
     pagHogwarts.style.display="block";
+    contBuscar.innerHTML = " ";
+
 }, false);
 
 //div contenedor resultado filtro de varitas
@@ -65,6 +69,8 @@ Artefactos.addEventListener("click", function(){
     pagHechizos.style.display="none"; 
     pagArtefactos.style.display="block";  
     document.getElementById('root').innerHTML = " ";//limpia div root
+    contBuscar.innerHTML = " ";
+    document.getElementById('mostrarvaritas').innerHTML = " ";//limpia div root
     let condition = Artefactos.value;
     let varitaMagica = filterVarita(dataHarry,condition);//arreglo que devuelve las varitas 
        for(let i = 0; i< varitaMagica.length; i++){
@@ -87,10 +93,11 @@ Hechizos.addEventListener("click", function(){
     pagPersonajes.style.display = "none";
     pagHogwarts.style.display="none";
     pagHistoria.style.display = "none";
-    pagArtefactos.style.display="none";  
+    pagArtefactos.style.display="none"; 
     pagHechizos.style.display="block";
     document.getElementById('mostrarHechizos').innerHTML = " ";//limpiar
     document.getElementById('root').innerHTML = " ";
+    contBuscar.innerHTML = " ";
     let condition = Hechizos.value;
     let patronus = filterPatronus(dataHarry,condition);//arreglo con patronus
        for(let i = 0; i< patronus.length; i++){
@@ -137,6 +144,7 @@ select1.addEventListener("change", () =>{
     document.getElementById('root').innerHTML = " ";
     let condition = select1.options[select1.selectedIndex].text;
     let resultCasa = filterCasa(dataHarry, condition);
+    
     for(let i = 0; i< resultCasa.length; i++){
         container.innerHTML += `<div class="card" style="background-image: url(${resultCasa[i].card})">
         <img class="imgPersonaje"src="${resultCasa[i].image}">
@@ -188,46 +196,43 @@ select4.addEventListener("change", () =>{
 }, false);
 
   //ordenar de la a-z y z-a
-  const select5 = document.getElementById("select5");
+ const select5 = document.getElementById("select5");
   select5.addEventListener("change", () =>{
       container.innerHTML = "";
       let condition = select5.options[select5.selectedIndex].index;
       let ordenados = orderName(dataHarry, condition);
       
       for(let i=0;i<ordenados.length;i++){    
-          container.innerHTML += `<div class="card" style="background-image: url(${ordenados[i].card})")>
+          container.innerHTML += `<div class="card" style="background-image: url(${ordenados[i].card})">
           <img class="imgPersonaje"  src="${ordenados[i].image}">
           <div class="textoName"><p class="namePersonaje"> ${ordenados[i].name}</p></div></div>`;
           modalGo(ordenados);  
        }
-  }, false);
-//buscador
-
-
-
+  }, false); 
 
  
-  // Función que muestra los resultados de búsqueda 
-  /* const resultadobuscar = document.getElementById('resultadobuscar');  //contenedor div
-  const btnvarita = document.getElementById('btnvarita');//boton
-  const buscador = document.getElementById('buscador');//input
+
+//buscar
+const inputbuscar = document.getElementById('buscador');
+const contBuscar = document.getElementById('resultadobuscar');
+const botonBuscar = document.getElementById('btnaccio');
+botonBuscar.addEventListener("click", function(){
+    contBuscar.innerHTML = " ";
+    let nombre = inputbuscar.value;
+    let resultadobuscar = buscarPersonaje(dataHarry,nombre);
+    
+   for(let i=0; resultadobuscar.length; i++){
+       contBuscar.innerHTML += `<div class="card" style="background-image: url(${resultadobuscar[i].card})">
+        <img class="imgPersonaje"  src="${resultadobuscar[i].image}">
+        <div class="textoName"><p class="namePersonaje"> ${resultadobuscar[i].name}</p></div></div>`;
+        modalGo(resultadobuscar); 
+        console.log(resultadobuscar)
+    }
+        
+ 
+}, false);
+
   
-  btnvarita.addEventListener('click', () => {
-    resultadobuscar.innerHTML = "";//limpia div
-    const resultado = buscarPersonaje(dataHarry, buscador.value);//interaccion con data.js
-    console.log(resultado)
-       for(let i=0; i < resultado.length; i++) { 
-            if(buscador < 0){
-                resultadobuscar.innerHTML += `
-                <div class="card" style="background-image: url(${resultado[i].card})">
-                <img class="imgPersonaje" style="background-image: url(${dataHarry[i].card}) src="${resultado[i].image}">
-                <div class="textoName"><p class="namePersonaje"> ${resultado[i].name}</p></div></div>`;  
-                console.log(resultado)
-             }else{
-                resultadobuscar.innerHTML = "";
-             }             
-        }
-  }); */
  /*boton giratiempo para volver atras*/
 /* const btnGiratiempo = document.getElementById('btnGiratiempo');
   btnGiratiempo.addEventListener('click', () => {
@@ -260,7 +265,7 @@ function modalGo (dataHarry) {
                         <p>Casa:${dataHarry[i].house}</p>
                         <p>Especie: ${dataHarry[i].species}</p>
                         <p>Género: ${dataHarry[i].gender}</p>
-                        <p>Fecha de nacimiento: ${dataHarry[i].dateOfBirth}</p>
+                        <p>Fecha nac.: ${dataHarry[i].dateOfBirth}</p>
                         <p>Ascendencia: ${dataHarry[i].ancestry}</p>
                         <p>Color de ojos: ${dataHarry[i].eyeColour}</p>
                         <p>Color de cabello: ${dataHarry[i].hairColour}</p>
