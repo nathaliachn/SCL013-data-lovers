@@ -73,10 +73,8 @@ export const filterPatronus = (data) => {
 // Función que busca personajes
 export const buscarPersonaje = (data, nombre) => {
   const arrSearch = [...data];
-  console.log(arrSearch)
   const newarray = arrSearch.filter((dato) => dato.name
     .indexOf(nombre[0].toUpperCase() + nombre.slice(1).toLowerCase()) > -1);
-    console.log(newarray)
   return newarray;
 };
 

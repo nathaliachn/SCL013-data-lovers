@@ -15,10 +15,6 @@
     text-decoration: none;
 }
 
-/* html, body{
-    cursor: url('http://cur.cursors-4u.net/others/images3/oth247.png'), auto;
-
-}  */
 /*fondo*/
 body{
     background-image: url(./img/fondo2.jpg); 
@@ -100,7 +96,7 @@ body{
 /*titulos*/
 h1{
     font-family: 'Harry';
-    font-size: 40px;
+    font-size: 50px;
     color: var(--color-h1);
     text-align: center;
 }
@@ -290,6 +286,12 @@ h1{
     color: white;
     border-radius: 20px;
     letter-spacing: 1px;
+}
+
+/*Bienvenidos*/
+
+#cont-bienvenida{
+    margin-top:1%
 }
 
 /*Seccion Historia*/
@@ -654,6 +656,73 @@ h3{
  
 /*------------------------------------------------*/
 
+/*carrusel*/
+
+.content-all{
+    width: 210px;
+    margin: auto;
+    perspective: 800px;
+    position: relative;
+    margin-top: 150px;
+}
+
+.content-carrousel{
+    width: 100%;
+    position: absolute;
+    animation: rotar 20s infinite linear;
+    transform-style: preserve-3d;
+}
+
+.content-carrousel:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+
+.content-carrousel figure{
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px black;
+    transition: all 300ms;
+    
+}
+
+.content-carrousel figure:hover{
+    box-shadow: 0px 0px 0px 0px black;
+    transition: all 300ms;
+}
+
+.content-carrousel figure:nth-child(1){transform: rotateY(0deg) translateZ(300px);}
+.content-carrousel figure:nth-child(2){transform: rotateY(40deg) translateZ(300px);}
+.content-carrousel figure:nth-child(3){transform: rotateY(80deg) translateZ(300px);}
+.content-carrousel figure:nth-child(4){transform: rotateY(120deg) translateZ(300px);}
+.content-carrousel figure:nth-child(5){transform: rotateY(160deg) translateZ(300px);}
+.content-carrousel figure:nth-child(6){transform: rotateY(200deg) translateZ(300px);}
+.content-carrousel figure:nth-child(7){transform: rotateY(240deg) translateZ(300px);}
+.content-carrousel figure:nth-child(8){transform: rotateY(280deg) translateZ(300px);}
+.content-carrousel figure:nth-child(9){transform: rotateY(320deg) translateZ(300px);}
+.content-carrousel figure:nth-child(10){transform: rotateY(360deg) translateZ(300px);}
+
+.content-carrousel img{
+    width: 100%;
+    transition: all 300ms;
+}
+
+.content-carrousel img:hover{
+    transform: scale(1.2);
+    transition: all 300ms;
+}
+
+
+@keyframes rotar{
+    from{
+        transform: rotateY(0deg);
+    }to{
+        transform: rotateY(360deg);
+    }
+}
 
 
 /*footer*/
@@ -687,29 +756,107 @@ footer{
 
 /*Celular*/
 @media screen and (max-width:425px){
-    /*personajes*/
- 
-    .selectores{
-        width: 50%;
-        margin: 1%;
-        padding: 0.5%;
-        font-family: "Sofia";
-        border-radius: 1em;
-       font-size: 1em;    
-   
-    }  
+
+/*Barra superior */
+
+#pagInicio{
+    width: 100%;
+    height: 122px;
+}
+
+.ancho{
+    width: 100%;
+    height: 119px;
+}
+
+.cont-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo{
+    width: 40%;
+    height: 48px;
+    margin-left: 30%;
+    background-size: 100%;
+    float: left;
+}
+
+.nav-header{
+    width: 99%;
+    height: 86px;
+    text-align: center;
+    padding-top: 1px;
+    box-sizing: border-box;
+}
+
+.inputBuscar{
+    height: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing:border-box ;
+}
+
+#btnaccio {
+    width: 22%;
+    right: 10%;
+    margin: 1%;
+    padding: 0.5%;
+}
+
+.nav-containerItem{
+    display: inline;
+
+} 
+.nav-containerItem a{
+    color: #fff;
+    font-size: 20px;
+    padding-left: 15px;
+    letter-spacing: 1px;/*espacio entre letras*/
+}
+
+/*Bienvenida*/
+#cont-bienvenida{
+    margin-top:8%
+}
+/*Seccion Historia*/
+#pagHistoria{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 12%;
+    margin-top: 8%;
+}
+
+/*personajes*/
+
+#pagPersonajes{
+    margin-top:8%
+}
+.selectores{
+    width: 50%;
+    margin: 1%;
+    padding: 0.5%;
+    font-family: "Sofia";
+    border-radius: 1em;
+    font-size: 1em;    
+}  
+
 /*SECCION hogwarts*/
-.pagHogwarts{
+#pagHogwarts{
     width: 80%;
     margin-left: 10%;
+    margin-top:8%
 }
 .contHogwarts{
     background-image: none;
     background-color: rgba(22, 8, 8, 0.7);
-    width: 80%;
-    height: 1200px;
+    width: 102%;
+    height: 1269px;
     border-radius: 50px;
-    margin-left: 8%;
+    margin-left: 2%;
 }
 .textohogwarts{
     width: 74%;
@@ -718,6 +865,95 @@ footer{
     margin-left: 14%;
     margin-top: 6%;
 }
+
+
+
+/*SECCION HECHIZO*/
+#pagHechizos{
+    width: 86%;
+    margin-left: 8%;
+    margin-top: 8%;
+}
+
+.textohechizos{
+    width: 87%;
+    margin-left: 7%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    text-align: center;
+    font-size: 21px;
+    color: wheat;
+}
+
+
+/*SECCION VARITAS: contenedor varitas*/
+#pagArtefactos{
+    width: 86%;
+    margin-left: 8%;
+    margin-top: 8%;
+}
+
+#cont-mostrar{
+  display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    margin-top: 545%;
+}
+
+#mostrarvaritas{
+    width: 99%; 
+    background-color: rgba(22, 8, 8, 0.7);;
+} 
+
+.cardvaritas {
+    width: 63%;
+    height: 297px;
+    margin: 1%;
+    padding-top: 13%;
+}
+
+.datoWand{
+    margin-left: 25px;
+    margin-top: 41%;
+}
+#nombrewand{
+    font-size: 18px;
+}
+
+/*Quienes somos*/
+#pagTGS{
+    width: 80%;
+    margin-left: 12%;
+    margin-top: 1%;  
+}
+
+.cont-snitch{
+/*     background-color: rgba(22, 8, 8, 0.7); */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 198%;
+    margin-top: 1%;
+    margin-left: -3%;
+}
+
+#textosnitch1 #textosnitch2{
+    font-size: 20px;
+    text-align: center;
+}
+.centrosnitch{
+    background-color: seashell;
+    width: 20%;
+}
+
+.imgsnitch{
+    width: 40%;
+    height: 187px;
+    border-radius: 266px;
+    margin-left: 6%;  
+}
+
 
 /*MODAL----------------------------*/
 

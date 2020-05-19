@@ -19,6 +19,12 @@ const Hogwarts = document.getElementById("Hogwarts");
 const Artefactos = document.getElementById("Artefactos");
 const Hechizos = document.getElementById("Hechizos");
 
+//funcion para volver al inicio
+const alternLogoMenu = document.querySelector('.logo');
+alternLogoMenu.addEventListener('click', () => {
+  window.location.reload();
+});
+
 //evento click en barra superior Quienes Somos
 const quienesSomos = document.getElementById('quienesSomos');
 quienesSomos.addEventListener("click", function(){
@@ -141,6 +147,10 @@ MuestraPersonajes.addEventListener("click", function(){
 //select filtrar por casa
 const select1 = document.getElementById('select1');
 select1.addEventListener("change", () =>{
+    document.getElementById("select2").value = "";
+    document.getElementById("select3").value = "";
+    document.getElementById("select4").value = "";
+    document.getElementById("select5").value = "";
     document.getElementById('root').innerHTML = " ";
     let condition = select1.options[select1.selectedIndex].text;
     let resultCasa = filterCasa(dataHarry, condition);
@@ -156,6 +166,10 @@ select1.addEventListener("change", () =>{
 //select filtrar por Linaje
 const select2 = document.getElementById('select2');
 select2.addEventListener("change", () =>{
+    document.getElementById("select1").value = "";
+    document.getElementById("select3").value = "";
+    document.getElementById("select4").value = "";
+    document.getElementById("select5").value = "";
     document.getElementById('root').innerHTML = " ";
     let condition2 = select2.options[select2.selectedIndex].value;
     let resultLinaje = filterLinaje(dataHarry, condition2);
@@ -170,6 +184,10 @@ select2.addEventListener("change", () =>{
 //select filtrar por Genero
 const select3 = document.getElementById('select3');
 select3.addEventListener("change", () =>{
+    document.getElementById("select2").value = "";
+    document.getElementById("select1").value = "";
+    document.getElementById("select4").value = "";
+    document.getElementById("select5").value = "";
     document.getElementById('root').innerHTML = " ";
     let condition3 = select3.options[select3.selectedIndex].value;
     let resultGenero = filterGenero(dataHarry, condition3);
@@ -184,6 +202,10 @@ select3.addEventListener("change", () =>{
 //select filtrar por Especie
 const select4 = document.getElementById('select4');
 select4.addEventListener("change", () =>{
+    document.getElementById("select2").value = "";
+    document.getElementById("select3").value = "";
+    document.getElementById("select1").value = "";
+    document.getElementById("select5").value = "";
     document.getElementById('root').innerHTML = " ";
     let condition4 = select4.options[select4.selectedIndex].value;
     let resultEspecie = filterEspecie(dataHarry, condition4);
@@ -198,6 +220,10 @@ select4.addEventListener("change", () =>{
   //ordenar de la a-z y z-a
  const select5 = document.getElementById("select5");
   select5.addEventListener("change", () =>{
+    document.getElementById("select2").value = "";
+    document.getElementById("select3").value = "";
+    document.getElementById("select4").value = "";
+    document.getElementById("select1").value = "";
       container.innerHTML = "";
       let condition = select5.options[select5.selectedIndex].index;
       let ordenados = orderName(dataHarry, condition);
@@ -217,7 +243,15 @@ const inputbuscar = document.getElementById('buscador');
 const contBuscar = document.getElementById('resultadobuscar');
 const botonBuscar = document.getElementById('btnaccio');
 botonBuscar.addEventListener("click", function(){
+    container.innerHTML = "";
     contBuscar.innerHTML = " ";
+    pagBienvenida.style.display = "none";
+    pagTGS.style.display = "none";  
+    pagHistoria.style.display = "none";
+    pagHogwarts.style.display="none";
+    pagArtefactos.style.display="none"; 
+    pagHechizos.style.display="none";  
+    pagPersonajes.style.display = "none";
     let nombre = inputbuscar.value;
     let resultadobuscar = buscarPersonaje(dataHarry,nombre);
     
@@ -226,7 +260,6 @@ botonBuscar.addEventListener("click", function(){
         <img class="imgPersonaje"  src="${resultadobuscar[i].image}">
         <div class="textoName"><p class="namePersonaje"> ${resultadobuscar[i].name}</p></div></div>`;
         modalGo(resultadobuscar); 
-        console.log(resultadobuscar)
     }
         
  
