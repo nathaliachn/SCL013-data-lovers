@@ -6,7 +6,8 @@
 * [2. Historias de usuario](#2-historias-de-usuario)
 * [3. Diseño](#3-Diseño)
 * [4. UX y tests de usabilidad](#4-ux-y-tests-de-usabilidad)
-* [5.planificacion ](#5-planificacion)
+* [5.Test unitarios ](#5-test-unitarios)
+* [6.planificacion ](#6-planificacion)
 
 ***
 
@@ -127,7 +128,13 @@ https://drive.google.com/open?id=19HzicxPo6NWG6OMnCjCsJqqhRpaUZTcQ
  Adjuntamos el enlace de Zeplin
  https://zpl.io/VQXdBBP
 
-## 5. Planificacion:
+## 5. Test unitarios:
+
+ ![Test](https://i.ibb.co/MGsgvd4/test.jpg)
+
+
+
+## 6. Planificacion:
  
  Adjunto el enlace de trello
  
