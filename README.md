@@ -84,9 +84,27 @@ y por ultimo nuestro prototipo de alta fidelidad en figma:
 
 ## 4. Ux y tests de usabilidad:
 
+Las entrevistas fueron hechas por diferentes usuarios con distinto grado de entendimiento del tema, tanto para tener variedad de opiniones y tambien lapara corroborar si la informacion era entendible aun que no seas parte de nuestro publico objetivo.
+Se realizaron los testeos de usabilidad mediantes entrevistas por zoom, en la cual se siguio la pauta a continuacion:
+Buenos dias mi nombre es Nathalia, como estas?
+Te voy a comentar un poco acerca de esta entrevista, se trata acerca de un testeo de usuario para este prototipo que tenemos en pantalla, un prototipo es una maquetacion de lo que sera en un producto final, una pagina o aplicacion web.
+Entonbces el fin de esta entrevista es que vos probes nuestro prototipo y nos comentes todo lo que pensas y sentis acerca de nuestra pagina.
+Tenes alguna duda?
+Antes de comenzar te comento que esto esta siendo grabado pero solo sera usado para medios educativos y solo lo vera un equipo de trabajo en concreto, estas de acuerdo?
+Bueno ahora podemos empezar:
+#el usuarios empieza a probar la prototipo y se le va guiando respecto a las dudas que tenga mientras va investigando nuestra pagina, terminado esto proseguimos a una entrevista con preguntas directas.
+Habiendo terminado de probar el prototipo seguiiremos con una serie de preguntas:
+- Que te parecio el nombre de nuestra pagina?
+- Que pensas de que no tengas que registrarte para entrar a la pagina?
+
+
+
 Aqui esta el enlace con las entrevistas a los usuarios para testear nuestro prototipo de alta fidelidad.
 
 https://drive.google.com/open?id=19HzicxPo6NWG6OMnCjCsJqqhRpaUZTcQ
+ 
+ Adjuntamos el enlace de Zeplin
+ https://zpl.io/VQXdBBP
 
 ## 5. Planificacion:
  
