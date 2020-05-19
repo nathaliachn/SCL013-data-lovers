@@ -84,4 +84,12 @@ y por ultimo nuestro prototipo de alta fidelidad en figma:
 
 ## 4. Ux y tests de usabilidad:
 
+Aqui esta el enlace con las entrevistas a los usuarios para testear nuestro prototipo de alta fidelidad.
+
+https://drive.google.com/open?id=19HzicxPo6NWG6OMnCjCsJqqhRpaUZTcQ
+
 ## 5. Planificacion:
+ 
+ Adjunto el enlace de trello
+ 
+ https://trello.com/b/xPjLxcoS/harry-potter
