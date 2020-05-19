@@ -85,17 +85,38 @@ y por ultimo nuestro prototipo de alta fidelidad en figma:
 ## 4. Ux y tests de usabilidad:
 
 Las entrevistas fueron hechas por diferentes usuarios con distinto grado de entendimiento del tema, tanto para tener variedad de opiniones y tambien lapara corroborar si la informacion era entendible aun que no seas parte de nuestro publico objetivo.
+
 Se realizaron los testeos de usabilidad mediantes entrevistas por zoom, en la cual se siguio la pauta a continuacion:
-Buenos dias mi nombre es Nathalia, como estas?
-Te voy a comentar un poco acerca de esta entrevista, se trata acerca de un testeo de usuario para este prototipo que tenemos en pantalla, un prototipo es una maquetacion de lo que sera en un producto final, una pagina o aplicacion web.
+
+-  Buenos dias mi nombre es Nathalia, como estas?
+
+-  Te voy a comentar un poco acerca de esta entrevista, se trata acerca de un testeo de usuario para este prototipo que tenemos en pantalla, un prototipo es una maquetacion de lo que sera en un producto final, una pagina o aplicacion web.
 Entonbces el fin de esta entrevista es que vos probes nuestro prototipo y nos comentes todo lo que pensas y sentis acerca de nuestra pagina.
-Tenes alguna duda?
-Antes de comenzar te comento que esto esta siendo grabado pero solo sera usado para medios educativos y solo lo vera un equipo de trabajo en concreto, estas de acuerdo?
-Bueno ahora podemos empezar:
+
+-  Tenes alguna duda?
+
+-  Antes de comenzar te comento que esto esta siendo grabado pero solo sera usado para medios educativos y solo lo vera un equipo de trabajo en concreto, estas de acuerdo?
+
+-  Bueno ahora podemos empezar:
+
 #el usuarios empieza a probar la prototipo y se le va guiando respecto a las dudas que tenga mientras va investigando nuestra pagina, terminado esto proseguimos a una entrevista con preguntas directas.
-Habiendo terminado de probar el prototipo seguiiremos con una serie de preguntas:
-- Que te parecio el nombre de nuestra pagina?
-- Que pensas de que no tengas que registrarte para entrar a la pagina?
+
+-  Habiendo terminado de probar el prototipo seguiiremos con una serie de preguntas:
+
+  -- Que te parecio el nombre de nuestra pagina?
+  -- Que pensas de que no tengas que registrarte para entrar a la pagina?
+  -- Crees que la pagina refleja la identidad de Harry Potter?
+  -- En tus propias palabras me puedes decir que te parece la pagina, si te parece amigable, dificil de usar, interesante etc?
+  -- Que piensas acerca de la parte de personajes?
+  -- que piensas acerca de la parte de los filtrados y las categorias?
+  -- que piensas acerca de la parte del modal y  que se extienda para darte mas informacion acerca de cada personaje?
+  -- Comentame si estarias dispuesto a usar esta app regularmente, compartirla y recomendara?
+  -- Dime que fue lo que mas te gusto de nuestra pagina?
+  -- Que fue lo que menos te gusto?
+  
+  Bueno, finalizadas todas estas preguntas damos por terminada la entrevista y decirte que muchas gracias por tu tiempo y tus honestinad, va a ser muy tomada en cuenta con mucho gusto! esperamos que hayas disfrutado de esta experiencia, que estes muy bien, saludos!
+  
+  ++ se concluye con la entrevista.
 
 
 
