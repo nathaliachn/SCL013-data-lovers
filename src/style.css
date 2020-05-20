@@ -17,12 +17,12 @@
 
 /*fondo*/
 body{
-    background-image: url(./img/fondo2.jpg); 
+    background-image: url(./img/fondo.png); 
     background-repeat: no-repeat;
-    background-size: 2000px; 
+    background-size: 100% 100%; 
     background-attachment: fixed;
     background-color: rgba(22, 8, 8, 0.7);
-} 
+}  
 
 .fondocolor{
     background-color: #8190a3;
@@ -67,7 +67,7 @@ body{
     z-index: -1;
     visibility: visible;
     overflow: hidden;
-  }  */
+  }   */
 /*botones*/
  #alohomora {
     background-color: rgba(222, 196, 157, 0.80);
@@ -81,7 +81,7 @@ body{
     border-radius: 1em;
     font-size: 1em;
 }
-#btnGiratiempo{
+/* #btnGiratiempo{
     background-color: rgba(222, 196, 157, 0.80);
     color: black;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -91,13 +91,21 @@ body{
     font-family: "Sofia";
     border-radius: 1em;
     font-size: 20px;
-}
+} */
 
 /*titulos*/
 h1{
     font-family: 'Harry';
     font-size: 50px;
     color: var(--color-h1);
+    text-align: center;
+}
+
+.titulo{
+    text-align: center;
+    background-image: url('./img/b.png');
+}
+.tituloH{
     text-align: center;
 }
 
@@ -141,10 +149,10 @@ h1{
 }
 
 .nav-header{
-    width: 80%;
-    height: 70px;
+    width: 24%;
     text-align: right;
-    padding-top: 10px;
+    padding-top: 24px;
+    margin-right: 2%;
     box-sizing: border-box;
 
 }
@@ -303,7 +311,24 @@ h1{
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-left: 12%;
-    margin-top: 1%;
+    margin-top: 1.8%;
+}
+
+.textoHistoria{
+    color: white;
+    font-size: 20px;
+    font-family: 'Sofia';
+    margin: 2%;
+}
+
+.contimgh{
+    text-align: center;
+}
+
+.imgh{
+    width: 153px;
+    height:158px;
+    border-radius: 10px;
 }
 
 /*Seccion de Personajes*/
@@ -311,6 +336,7 @@ h1{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 1.8%;
 }
 
 .selectores{
@@ -389,6 +415,7 @@ h1{
     background-color: rgba(22, 8, 8, 0.7);
     width: 80%;
     margin-left: 10%;
+    margin-top: 1.8%;
 }
 .contHogwarts{
     background-image: url(./img/hogwarts.jpg);
@@ -419,7 +446,7 @@ h1{
     font-family: 'SofiaProRegular';
     font-size: 22px;
     color: aliceblue;
-    margin-top: 6%;
+    margin-top: 2%;
     text-align: center;
 
 }
@@ -431,6 +458,7 @@ h1{
     width: 80%;
     height: 100vh;
     margin-left: 10%;
+    margin-top: 1.8%;
     background-color: rgba(22, 8, 8, 0.7);
 }
 
@@ -541,6 +569,7 @@ h3{
 #pagHechizos{
     width: 80%;
     margin-left: 11%;
+    margin-top: 1.8%;
     background-color: rgba(22, 8, 8, 0.7); 
 }
 
@@ -549,14 +578,14 @@ h3{
 }
 
 .textohechizos{
-    background-color: rgba(2, 6, 38, 0.7);
     width: 60%;
     margin-left: 20%;
     margin-top: 2%;
     margin-bottom: 2%;
-    color: white;
+    color: wheat;
     font-family: 'Sofia';
-    font-size: 18px;
+    font-size: 22px;
+    text-align: center;
 }
 
 #mostrarHechizos{
@@ -866,8 +895,6 @@ footer{
     margin-top: 6%;
 }
 
-
-
 /*SECCION HECHIZO*/
 #pagHechizos{
     width: 86%;
@@ -929,7 +956,6 @@ footer{
 }
 
 .cont-snitch{
-/*     background-color: rgba(22, 8, 8, 0.7); */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

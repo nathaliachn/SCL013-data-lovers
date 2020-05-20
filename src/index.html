@@ -12,9 +12,9 @@
 <body>
   <style type="text/css">* {cursor: url(http://cur.cursors-4u.net/others/oth-3/oth247.cur), auto !important;}</style>
   <a href="http://www.cursors-4u.com/cursor/2008/12/20/harry-potter-golden-snitch-2.html" target="_blank" title="Harry Potter - Golden Snitch 2"><img src="http://cur.cursors-4u.net/cursor.png" border="0" alt="Harry Potter - Golden Snitch 2" style="position:absolute; top: 0px; right: 0px;" /></a>
-  <!--<video id='video' loop autoplay preload muted>
-      <source src="./img/fondo2.webm" type="video/webm;">
-      </video>  -->
+  <!-- <video id='video' loop autoplay preload muted>
+      <source src="./img/fondovideo.webm" type="video/webm;">
+      </video>  --> 
   <div class="fondocolor">
     <section id="pagPuerta" style="display: none">
       <!-- <a href="#" id="gifPuerta"></a> -->
@@ -33,7 +33,7 @@
           <ul class="cont-item">
             <li class="nav-containerItem"><a href="#" id="quienesSomos">¿Quiénes Somos?</a></li>
             <li class="nav-containerItem"><input type="text" id="buscador" class="inputBuscar"
-                placeholder="accio"><button id="btnaccio">Accio</button></li>
+                placeholder="accio"><!-- <button id="btnaccio">Accio</button> --></li> 
           </ul>
         </nav>
       </div>
@@ -42,6 +42,9 @@
       <label id="icon" for="check"><img class="icono-menu" src="./img/icono.png"></label>
       <div class="barra">
         <nav class="nav-menu">
+          <a>
+            <div class="link">TRASLADOR</div>
+          </a>
           <a href="#" id="Historia">
             <div class="link">Historia de la Mágia</div>
           </a>
@@ -66,7 +69,9 @@
   <!--Seccion Bienvenida-->
   <section id="pagBienvenida" style="display:block">
     <div id="cont-bienvenida">
+    <div class="titulo"></div>
     <h1>Bienvenido al Mundo Mágico</h1>
+    <!-- <div class="tituloH"><img src="./img/h.png"></div> -->
     <div class="content-all">
       <div class="content-carrousel">
           <figure><img src="https://data.whicdn.com/images/331474592/original.gif"></figure>
@@ -166,23 +171,27 @@
   <!--Seccion Historia de la Magia----------------------------------------------------------------------->
   <section id="pagHistoria" style="display:none">
     <div class="historiamagia">
+      <h1>Historia de la Magía</h1>
       <div class="textomagia">
-        <h1>Historia de la Magía</h1>
-      
-        <p>
+        
+          <p class="textoHistoria">
           La historia de la magia proviene desde tiempos remotos. Grandes sucesos han marcado la línea de tiempo del
           mundo mágico,
           como la primera convención internacional de brujos en 1289, y la ventisca de jabón de 1378. C.+-
           A lo largo de los siglos ha sido marcada por famosos mago que incursionaron en la magia oscura,
           entre ellos Emeric “El Malvado” y Uric “el Chiflado” desarrollaron un sinfín de hechizos y encantamientos
-          tenebrosos.
+          tenebrosos.</p>
+          <div class="contimgh"><img src="./img/h1.jpg" class="imgh"></div>
+          <p class="textoHistoria">
           La edad media, fue marcada por el inicio de la casería y la quema de brujas del
           siglo XIV, una gran masacre que dejo a nuestro mundo de luto por un largo periodo
           de tiempo. Lo que llevo a la Asamblea medieval de Brujos en Europa a realizar reformas.
           No podemos olvidarnos, en 1991, de la huelga de gigantes y gárgolas, además de la rebelión de los
           duendes en el norte del continente europeo, hechos que llevaron a los ministros de magia de todo
           el mundo a entablar dialogo para formar las bases de lo que sería la convivencia de seres mágicos,
-          transcribiéndolo al código de criaturas mágicas.
+          transcribiéndolo al código de criaturas mágicas.</p>
+          <div class="contimgh"><img src="./img/h2.jpg" class="imgh"></div>
+          <p class="textoHistoria">
           En los últimos 100 años, los hitos más recientes que han marcado al mundo mágico por completo,
           nos encontramos con la aparición de mago oscuro Gellert Grindelwald (1883 - 1998). Grindelwald,
           era un mago búlgaro – ingles de sangre pura, tenía una gran fascinación por la
@@ -191,11 +200,15 @@
           los cuales son cadáveres de humanos que han sido poseídos mediante magia oscura para ser
           controlados por el mago que los crea. Pero su cometido fue interrumpido, ya que Albus Dumbledore
           logra detenerlo y es encarcelado en la prisión de Askaban, donde años más tarde es asesinado
-          por Lord Voldemort.
+          por Lord Voldemort.</p>
+          <div class="contimgh"><img src="./img/h4.jpg" class="imgh"></div>
+          <p class="textoHistoria">
           Lord Voldemort, cuyo nombre real es Tom Marvolo Ryddle (31 de diciembre de 1926 – 2 de mayo de
           1998) fue el mago tenebroso más poderoso de todos los tiempos.
           La Primera Guerra Mágica inicio oficialmente partir de 1970 y termina abruptamenteen 1981. Marcó
-          el original "reinado de la oscuridad" de Lord Voldemort.
+          el original "reinado de la oscuridad" de Lord Voldemort.</p>
+          <div class="contimgh"><img src="./img/voldemort.jpg" class="imgh"></div>
+          <p class="textoHistoria">
           La Rebelión del Señor Oscuro se produjo con la ayuda de sus mortífagos, magos oscuros
           y brujas que le servían. Llevó el terror tanto muggles como magos.
           Voldemort y su ejército de mortífagos, se opusieron al Ministerio de Magia y la Orden del Fénix,
@@ -291,12 +304,16 @@
       <div id="mostrarHechizos"></div>
     </div>
   </section>
-  
-  <div class="cont-busqueda" >
+  <!--resultado buscador de personajes -->
+  <seccion id="pagBusqueda" style="display: none">
+  <div class="cont-busqueda" > 
+    <h1>Resultado de la Busqueda</h1>
     <div id="resultadobuscar"></div>
   </div>
-  <!--   <button id="btnGiratiempo">Giratiempo</button> -->
-  <!--Pie de Página-->
+  </seccion>
+<!--boton volver atras-->
+<!--  <button id="btnGiratiempo">Giratiempo</button>  -->
+
 </div>
   <footer>@copyright The Golden Snitch</footer>
   <script src="main.js" type="module"></script>

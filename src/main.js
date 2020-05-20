@@ -11,6 +11,7 @@ const pagHogwarts = document.getElementById('pagHogwarts');
 const pagArtefactos = document.getElementById('pagArtefactos');
 const pagHechizos = document.getElementById('pagHechizos');
 const pagTGS = document.getElementById('pagTGS');
+const contbusqueda = document.getElementById('pagBusqueda');
 
 
 //menu principal id
@@ -34,8 +35,10 @@ quienesSomos.addEventListener("click", function(){
     pagHechizos.style.display="none"; 
     pagArtefactos.style.display="none";
     pagHistoria.style.display = "none";  
-    pagTGS.style.display = "block";  
+    pagTGS.style.display = "block"; 
+    contbusqueda.style.display = "none"; 
     contBuscar.innerHTML = " ";
+  
 }, false);
 
 //evento click en el menu que muestra historia de la mágia
@@ -46,6 +49,7 @@ Historia.addEventListener("click", function(){
     pagHogwarts.style.display="none";
     pagHechizos.style.display="none"; 
     pagArtefactos.style.display="none";
+    contbusqueda.style.display = "none";
     pagHistoria.style.display = "block"; 
     contBuscar.innerHTML = " ";  
 }, false);
@@ -58,6 +62,7 @@ Hogwarts.addEventListener("click", function(){
     pagHistoria.style.display = "none";
     pagArtefactos.style.display="none"; 
     pagHechizos.style.display="none";
+    contbusqueda.style.display = "none";
     pagHogwarts.style.display="block";
     contBuscar.innerHTML = " ";
 
@@ -73,6 +78,7 @@ Artefactos.addEventListener("click", function(){
     pagHogwarts.style.display="none";
     pagHistoria.style.display = "none";  
     pagHechizos.style.display="none"; 
+    contbusqueda.style.display = "none";
     pagArtefactos.style.display="block";  
     document.getElementById('root').innerHTML = " ";//limpia div root
     contBuscar.innerHTML = " ";
@@ -99,7 +105,8 @@ Hechizos.addEventListener("click", function(){
     pagPersonajes.style.display = "none";
     pagHogwarts.style.display="none";
     pagHistoria.style.display = "none";
-    pagArtefactos.style.display="none"; 
+    pagArtefactos.style.display="none";
+    contbusqueda.style.display = "none";
     pagHechizos.style.display="block";
     document.getElementById('mostrarHechizos').innerHTML = " ";//limpiar
     document.getElementById('root').innerHTML = " ";
@@ -134,6 +141,7 @@ MuestraPersonajes.addEventListener("click", function(){
     pagHogwarts.style.display="none";
     pagArtefactos.style.display="none"; 
     pagHechizos.style.display="none";  
+    contbusqueda.style.display = "none";
     pagPersonajes.style.display = "block";
     for(let i = 0; i< traepersonajes.length; i++){
    /*  container.innerHTML += `<div class="card ${traecasa}"><img class="imgPersonaje" src="${traeimg[i]}"><p class="namePersonaje"> ${traepersonajes[i]}</p></div>`; */
@@ -241,8 +249,8 @@ select4.addEventListener("change", () =>{
 //buscar
 const inputbuscar = document.getElementById('buscador');
 const contBuscar = document.getElementById('resultadobuscar');
-const botonBuscar = document.getElementById('btnaccio');
-botonBuscar.addEventListener("click", function(){
+//const botonBuscar = document.getElementById('btnaccio');
+inputbuscar.addEventListener("keyup", function(){
     container.innerHTML = "";
     contBuscar.innerHTML = " ";
     pagBienvenida.style.display = "none";
@@ -252,15 +260,16 @@ botonBuscar.addEventListener("click", function(){
     pagArtefactos.style.display="none"; 
     pagHechizos.style.display="none";  
     pagPersonajes.style.display = "none";
+    contbusqueda.style.display = "block";
     let nombre = inputbuscar.value;
     let resultadobuscar = buscarPersonaje(dataHarry,nombre);
-    
+     
    for(let i=0; resultadobuscar.length; i++){
        contBuscar.innerHTML += `<div class="card" style="background-image: url(${resultadobuscar[i].card})">
         <img class="imgPersonaje"  src="${resultadobuscar[i].image}">
         <div class="textoName"><p class="namePersonaje"> ${resultadobuscar[i].name}</p></div></div>`;
         modalGo(resultadobuscar); 
-    }
+    } 
         
  
 }, false);
@@ -270,8 +279,8 @@ botonBuscar.addEventListener("click", function(){
 /* const btnGiratiempo = document.getElementById('btnGiratiempo');
   btnGiratiempo.addEventListener('click', () => {
     window.location.reload();
-  }); 
- */
+  });  */
+ 
 
 //MODAL : muestra información de los personajes 
 function modalGo (dataHarry) {
@@ -316,4 +325,6 @@ function modalGo (dataHarry) {
         }
     }   
 } 
+
+
 
